@@ -1,12 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+nav{
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+}
+#natgeologo{
+    margin: 0 0 1vh 3vw;
+    width: 10vw;
+}
+.navbar_right{
+    width: 30vw;
+    height: 10vh;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    
+}
+.navbuttons{
+    position: relative;
+    font-family: georegular;
+    font-size: 1.2em;
+    list-style-type: none;
+    display: flex;
+    width: 25vw;
+    justify-content: space-between;
+}
+.navbuttons a{
+    text-decoration: none;
+    color: white;
+}
+#home_search{
+    position: absolute;
+    right: 37vw;
+    top: 9vh;
+    text-decoration: none;
+    color: white;
+}
+.nav_explore::after{
+    content: '';
+    position: absolute;
+    top: -2.2vh;
+    right: -0.7vw;
+    width: 8vw;
+    height: 7vh;
+    border: 1px white solid;
+    border-radius: 2vh;
+}
+#div_explore{
+    display: flex;
+}
+#div_explore i{
+    color: white;
+    margin-left: 1vw;
+    
+}
+
+
+
+.shows_header{
+    height: 90vh;
     width: 100vw;
     background-color: black;
+}
+#eagle1{
+    height: 90vh;
+}
+.show_details{
+    position: absolute;
+    width: 40vw;
+    height: 50vh;
+    right: 8vw;
+    top: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+.show_details h1{
+    text-align: center;
+    position: relative;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    color: white;
+    letter-spacing: calc(1px + 0.1vw);
+    font-size: 4rem;
+    margin: 0;
+}
+.show_details h5{
+    text-align: center;
+    position: relative;
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    letter-spacing: 0.5vw;
+    font-size: 1.7rem;
+    color: white;
+}
+.show_details h3{
+    text-align: center;
+    font-size: 2.1rem;
+    font-family: "Irish Grover", serif;
+    margin-top: 7vh;
+    color: #CFBE43;
+}
+.time_container{
+    position: relative;
+    margin-top: 3vh;
+    width: 90%;
+    left: 5%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+}
+.time_block{
+    display: flex;
+    flex-direction: column;
+}
+.time_number_group{
+    display: flex;
+    gap: 5px;
+}
+.time_number{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-p{
+    width: 1vw;
+    height: 4vh;
+    font-size: 3rem;
+    font-family: "Inria Serif", serif;
+    padding: 30px;
+    background-color: #513434;
+    border-radius: 15px;
     color: white;
-    font-weight: bold;
+}
+.time_label{
+    font-family: "Inria Serif", serif;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+.cloud{
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: vh;
+}
+.cloud_item{
+    width: 50vw;
+}
+
+
+
+.trending_shows{
+    background: url(resources/Figma\ mesh.png);
+}
+
+
+
+
+@media (max-width: 932px) {
+    #eagle1 {
+        content: url('resources/eagle\ 1\ cut.jpg'); 
+        width: 100%;
+        height: auto;
+        margin-top: 35vh;
+    }
+    nav{
+        display: flex;
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 2px solid white;
+        padding-bottom: 5vh;
+    }
+
+    .natgeologospan{
+        width: 100vw;
+    }
+
+    #natgeologo {
+        position: relative;
+        width: 30vw;
+        margin-top: 2vh;
+        left: 2vw;
+        margin-left: 2vw;
+    }
+
+    .navbar_right {
+        margin-top: 2vh;
+        width: 100vw;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navbuttons {
+        width: 80%;
+        gap: 12vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    #home_search {
+        top: 4vh;
+        right: 10vw;
+    }
+
+    .nav_explore::after {
+        content: '';
+        position: absolute;
+        top: -1.1vh;
+        right: -0.7vw;
+        width: 26vw;
+        height: 4.5vh;
+        border: 1px white solid;
+        border-radius: 1.5vh;
+    }
+
+
+
+    .show_details {
+        position: absolute;
+        width: 80vw;
+        height: auto;
+        right: 10vw;
+        top: 18vh;
+        flex-direction: column;
+    }
+
+    .show_details h1 {
+        font-size: 2.7rem;
+        margin: 0;
+    }
+
+    .show_details h5 {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .show_details h3 {
+        font-size: 1.5rem;
+        margin-top: 3vh;
+    }
+
+    .time_container {
+        display: flex;
+        gap: 5vw;
+        flex-direction: row;
+        height: auto;
+        justify-content: center;
+    }
+
+    .time_block {
+        margin-bottom: 5vh;
+    }
+
+    .time_number_group {
+        gap: 2px;
+    }
+
+    .time_number {
+        width: 7vw;
+        height: 5vh;
+        font-size: 1.7rem;
+        padding: 12px;
+    }
+
+    .time_label {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+@font-face{
+    font-family: 'geomedium';
+    src: url('fonts/geographwebmedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'geobold';
+    src: url('fonts/geographeditwebbold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'georegular';
+    src: url('fonts/geographwebregular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }

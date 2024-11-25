@@ -24,8 +24,29 @@ function CountdownDate(CountdownTime) {
     const MinuteElement = document.getElementById('minutes');
     const HourElement = document.getElementById('hours');
 
+    if (DisplaySecond < 10) {
+        DisplaySecond = "0" + DisplaySecond;
+    }
+    if (DisplayMinute < 10) {
+        DisplayMinute = "0" + DisplayMinute;
+    }
+    if (DisplayHour < 10) {
+        DisplayHour = "0" + DisplayHour;
+    }
+
     SecondElement.textContent = DisplaySecond;
     MinuteElement.textContent = DisplayMinute;
     HourElement.textContent = DisplayHour;
+
 }
-setInterval(CountdownDate(UpcomingDay), 1000);
+CountdownDate(UpcomingDay);
+setInterval(function(){
+    CountdownDate(UpcomingDay);
+}, 1000);
+
+
+document.getElementById('select_box').addEventListener('change', function () {
+    if (this.value) {
+        window.location.href = this.value;
+    }
+});

@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="resources/NatGeoFavicon.ico">
+    <link rel="icon" href="resources/Icons/NatGeoFavicon.ico">
     <link rel="stylesheet" href="Normalize.css">
     <link rel="stylesheet" href="style.css">
     <title>National Geographic</title>
     <script src="https://kit.fontawesome.com/5fd980475c.js" crossorigin="anonymous"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=Luckiest+Guy&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <body>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=Luckiest+Guy&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    <body>
     <nav>
-        <span class="natgeologospan"><img src="resources/Natgeologo.png" alt="National Geographic logo" id="natgeologo"></span>
+        <span class="natgeologospan"><img src="resources/Icons/Natgeologo.png" alt="National Geographic logo" id="natgeologo"></span>
         <a href=""><i class="fa-solid fa-magnifying-glass fa-lg" id="home_search"></i></a>
         <div class="navbar_right">
             <ul class="navbuttons">
@@ -32,12 +27,15 @@
                     <option value="shop.html">Shop Nat Geo</option>
                     <option value="other">Other</option>
                 </select>
+                <div class="select_icon_container">
+                    <i class="fa-solid fa-angle-down" id="menu_carot"></i>
+                </div>
             </div>
         </div>
     </nav>
 
     <header class="shows_header">
-        <img src="resources/eagle1.jpg" alt="image of eagle show" id="eagle1">
+        <img src="resources/Home_Page/eagle1.jpg" alt="image of eagle show" id="eagle1">
         <aside class="show_details">
             <h1>SKY SOVEREIGNS</h1>
             <h5>The majesty of eagles</h5>
@@ -76,16 +74,23 @@
     </header>
 
     <div class="cloud">
-        <img src="resources/cloud_flipped.png" alt="" id="left_cloud" class="cloud_item">
-        <img src="resources/cloud.png" alt="" id="right_cloud" class="cloud_item">
+        <img src="resources/Home_Page/cloud_flipped.png" alt="" id="left_cloud" class="cloud_item">
+        <img src="resources/Home_Page/cloud.png" alt="" id="right_cloud" class="cloud_item">
     </div>
 
     <section class="trending_shows">
         <div class="netflix_shows">
             <header class="trending_shows_title">
                 <h2>Trending On</h2>
-                <img src="resources/Netflix_logo.png" alt="Netflix">
+                <img src="resources/Icons/Netflix_logo.png" alt="Netflix">
             </header>
+
+            <div class="animals_trailer">
+                <div class="netflix_video">
+                    <video src="resources/Home_Page/Animals_Trailer.mp4" loop muted></video>
+                    <div class="netflix_overlay"></div>
+                </div>
+            </div>
         </div>
     </section>
     

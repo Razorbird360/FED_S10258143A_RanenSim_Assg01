@@ -50,3 +50,17 @@ document.getElementById('select_box').addEventListener('change', function () {
         window.location.href = this.value;
     }
 });
+
+const dropdown = document.getElementById('select_box');
+const menu_carot = document.getElementById('menu_carot')
+dropdown.addEventListener('focus', function () {
+    menu_carot.classList.add('rotate');
+});
+dropdown.addEventListener('blur', function () {
+    menu_carot.classList.remove('rotate');
+
+});
+function open_dropdown() {
+    dropdown.focus();
+}
+menu_carot.addEventListener('click', open_dropdown);

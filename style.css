@@ -72,7 +72,27 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-family: georegular;
+}
+.select_icon_container{
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-right: 0.6vw;
+}
+.select_icon_container{
+    font-size: 15px;
+}
+#menu_carot{
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+}
+#menu_carot.rotate{
+    transform: rotate(-180deg);
 }
 
 /* .nav_explore::after{
@@ -225,7 +245,7 @@ nav{
 .trending_shows{
     height: 100vh;
     width: 100vw;
-    background: url(resources/Figma\ mesh.png);
+    background: url(resources/Home_Page/Figma\ mesh.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -248,34 +268,87 @@ nav{
 .netflix_shows{
     width: 100vw;
     background-color: #CFBE43;
+    display: flex;
+    flex-direction: column;
 
 }
 .trending_shows_title{
-    background-color: aliceblue;
     display: flex;
     padding: 20vh 0 0 5vw;
     width: 100vw;
-    background-color: #513434;
     align-items: center;
 }
-.trending h2{
+.trending_shows_title h2{
     letter-spacing: 2px;
     font-size: 2rem;
     color: white;
-    font-family: "Julius Sans One", sans-serif;
+    font-family: "Julius Sans One", serif;
 }
 .trending_shows_title img{
     margin-left: 1vw;
     width: 12vw;
     height: 8vh;
 }
+.animals_trailer{
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.netflix_video{
+    position: relative;
+    width: 70vw;
+}
+.animals_trailer video{
+    border-radius: 1em;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.netflix_overlay{
+    border-radius: 1em;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 0%,   
+        rgba(0, 0, 0, 0.5) 40%, 
+        rgba(0, 0, 0, 0.8) 60%, 
+        rgba(0, 0, 0, 1) 100%
+      );
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.netflix_desc{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.netflix_desc h1{
+    color: white;
+    font-family: "Inria Serif", serif;
+    font-weight: 1000;
+}
+.netflix_desc p{
+    color: white;
+}
 
 
 
 
 @media (max-width: 932px) {
+    
     #eagle1 {
-        content: url('resources/eagle\ 1\ cut.jpg'); 
+        content: url('resources/Home_Page/eagle\ 1\ cut.jpg'); 
         width: 100vw;
         height: auto;
         margin-top: 33vh;
@@ -321,6 +394,13 @@ nav{
     #home_search {
         top: 4vh;
         right: 10vw;
+    }
+
+    #select_box{
+        width: 28vw;
+        height: 5vh;
+        margin-right: 4vw;
+        font-size: 15px;
     }
 
     /* .nav_explore::after {
@@ -403,10 +483,10 @@ nav{
 
     .trending_shows_title{
         padding: 6vh 0 0 0;
-
     }
     .trending_shows_title h2{
         font-size: 1.5rem;
+        padding-left: 10vw;
     }
     .trending_shows_title img{
         margin-left: 2vw;
@@ -414,10 +494,26 @@ nav{
         height: 5vh;
     }
     
+    .animals_trailer{
+        height: 20vh; 
+    }
+    .netflix_video{
+        width: 90vw;
+    }
+    .netflix_overlay{
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.1) 0%,   
+            rgba(0, 0, 0, 0.5) 40%, 
+            rgba(0, 0, 0, 0.8) 60%, 
+            rgba(0, 0, 0, 1) 100%
+          );
+    }
+    
+    
 
     
 }
-
 
 
 

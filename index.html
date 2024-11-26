@@ -9,11 +9,22 @@
     <title>National Geographic</title>
     <script src="https://kit.fontawesome.com/5fd980475c.js" crossorigin="anonymous"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=Luckiest+Guy&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    <body>
+    <link href="https://fonts.googleapis.com/css2?family=Average+Sans&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=Luckiest+Guy&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
     <nav>
-        <span class="natgeologospan"><img src="resources/Icons/Natgeologo.png" alt="National Geographic logo" id="natgeologo"></span>
-        <a href=""><i class="fa-solid fa-magnifying-glass fa-lg" id="home_search"></i></a>
+        <span class="natgeologospan"><a href="index.html"><img src="resources/Icons/Natgeologo.png" alt="National Geographic logo" id="natgeologo"></a></span>
+        <div class="right_align_search">
+            <div class="search_bar hide_bar_bg">
+                <div class="search_container hide_container">
+                    <img src="resources/Iconify/Cancel.svg" alt="" class="navbar_icon" id="cancel_icon">
+                    <input type="text" placeholder="Search..." id="search_input">
+                </div>
+                <img src="resources/Iconify/Search.svg" id="search_icon" class="navbar_icon">
+            </div>
+        </div>
+
+
         <div class="navbar_right">
             <ul class="navbuttons">
                 <li><a href="">Login</a></li>
@@ -87,11 +98,37 @@
 
             <div class="animals_trailer">
                 <div class="netflix_video">
-                    <video src="resources/Home_Page/Animals_Trailer.mp4" loop muted></video>
+                    <video src="resources/Home_Page/Animals_Trailer.mp4" autoplay loop muted></video>
                     <div class="netflix_overlay"></div>
+                    <div class="netflix_desc">
+                        <h1>Earth's Hidden Kingdoms</h1>
+                        <p>Earth's Hidden Kingdoms brings you face-to-face with the fascinating world of land animals. The show explores the daily lives of creatures, from mighty predators to resilient prey, showcasing their survival strategies and the delicate balance of nature. Through stunning footage and captivating storytelling, the show reveals how these animals adapt, thrive, and shape the landscapes they call home.</p>
+                        <div class="stars_review">
+                            <h5>40.3k</h5>
+                            <img src="resources/Iconify/star.svg" alt="star icon" class="star">
+                            <img src="resources/Iconify/star.svg" alt="star icon" class="star">
+                            <img src="resources/Iconify/star.svg" alt="star icon" class="star">
+                            <img src="resources/Iconify/star.svg" alt="star icon" class="star">
+                            <img src="resources/Iconify/star_half.svg" alt="half star icon" class="star">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="disney_movies">
+            <header class="trending_shows_title">
+                <h2>Discover more on</h2>
+                <img src="resources/Icons/Disney_logo.png" alt="Netflix">
+            </header>
+
+        </div>
+
+
+
+
+
+
     </section>
     
     <script src="main.js"></script>

@@ -674,7 +674,101 @@ nav{
 .item_container a:nth-child(6) .corners_item {
     background-image: url(resources/Home_Page/Corners_of_the_world/corner6.jpg);
 }
-
+.subscription {
+    background: url(resources/Home_Page/underwater_background.jpeg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subscription_plans_container{
+    position: relative;
+    height: auto;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+}
+.subscription_plan{
+    position: relative;
+    background-color: #292A37;
+    height: 70vh;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+}
+.price{
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    background-color: #3F4050;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscription_plan h1{
+    color: white;
+    font-family: "Kumbh Sans", sans-serif;
+    margin-top: 5vh;
+}
+.price p{
+    font-family: 'average sans';
+    font-size: 1.5rem;
+    color: white;
+}
+.plan_features{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 28vh;
+    gap: 2vh;
+}
+.plan_features p{
+    font-family: 'average sans';
+    font-size: 1.1rem;
+    color: #F8F8FF;
+}
+.plan1_features p:nth-child(n+3):nth-child(-n+6) {
+    color: rgba(248, 248, 255, 0.4);
+}
+.subscription_icon_container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 10%;
+    top: 28vh;
+    gap: 2vh;
+}
+.subscription_icon_container img{
+    width: 1.28rem;
+}
+.cancel_opacity{
+    opacity: 0.4;
+}
+.start_exploring{
+    position: absolute;
+    bottom: 3.5vh;
+    padding: 1.5rem 2.2rem;
+    background-color: #454651;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.start_exploring p{
+    color: white;
+    font-family: 'average sans';
+    font-size: 1.2rem;
+}
+.plan2_features p:nth-child(n+5):nth-child(-n+6) {
+    color: rgba(248, 248, 255, 0.4);
+}
+.plan2_exploring{
+    background-color: #195BFF;
+}
 
 
 
@@ -959,6 +1053,44 @@ nav{
         overflow-x: hidden;
     }
 
+    .subscription_plans_container{
+        flex-direction: column;
+        height: 80vh;
+    }
+    .subscription_plan{
+        width: 100%;
+        max-height: 25vh;
+        border-radius: 2rem 0;
+    }
+    .start_exploring{
+        display: none;
+    }
+    .price{
+        height: 100%;
+        width: 20%;
+        right: 0;
+        top: 0;
+        border-radius: 2rem 0;
+        cursor: pointer;
+    }
+    .plan_features{
+        top: 1vh;
+        margin-left: 3vw;
+    }
+    .plan_features p{
+        font-size: 1rem;
+    }
+    .subscription_icon_container{
+        top: 1.1vh;
+        left: 16vw;
+        gap: 1rem;
+    }
+    .subscription_plan h1{
+        position: absolute;
+        left: 0;
+        top: 5.5vh;
+        transform: rotate(-90deg);
+    }
 
 
 }

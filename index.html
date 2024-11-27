@@ -11,7 +11,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Average+Sans&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=Kumbh+Sans:wght@100..900&family=Luckiest+Guy&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    <nav>
+    <link href="https://fonts.googleapis.com/css2?family=Average+Sans&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=Kumbh+Sans:wght@100..900&family=Luckiest+Guy&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <nav>
         <span class="natgeologospan"><a href="index.html"><img src="resources/Icons/Natgeologo.png" alt="National Geographic logo" id="natgeologo"></a></span>
         <div class="right_align_search">
             <div class="search_bar hide_bar_bg">
@@ -19,17 +22,16 @@
                     <img src="resources/Iconify/Cancel.svg" alt="" class="navbar_icon" id="cancel_icon">
                     <input type="text" placeholder="Search..." id="search_input">
                 </div>
-                <img src="resources/Iconify/Search.svg" id="search_icon" class="navbar_icon">
+                <img src="resources/Iconify/Search.svg" id="search_icon" class="navbar_icon" alt="search icon">
             </div>
         </div>
-
-
+        
         <div class="navbar_right">
             <ul class="navbuttons">
                 <li><a href="" class="yellow_overlay">Login</a></li>
                 <li class="nav_sub"><span id="subscribe_pagelink" class="yellow_overlay">Subcribe</span></li>
             </ul>
-
+    
             <div class="select_container">
                 <select name="selection_box" id="select_box">
                     <option value="" id="current_select_value">Home</option>
@@ -267,7 +269,7 @@
         <div class="subscription_plans_container">
             <div class="subscription_plan" id="plan1">
                 <h1>Tier 1</h1>
-                <span class="price"><p>$1.99 / Month</p></span>
+                <div class="price"><p>$1.99 / Month</p></div>
                 <div class="plan_features plan1_features">
                     <p>Instant access to all content</p>
                     <p>Exclusive online articles</p>
@@ -285,15 +287,15 @@
                     <img src="resources/Iconify/Cancel.svg" alt="" class="cancel_opacity">
                     <img src="resources/Iconify/Cancel.svg" alt="" class="cancel_opacity">
                 </div>
-                <span class="start_exploring">
+                <div class="start_exploring">
                     <p>Start Exploring</p>
-                </span>
+                </div>
             </div>
 
 
             <div class="subscription_plan" id="plan2">
                 <h1>Tier 2</h1>
-                <span class="price"><p>#6.99 / Month</p></span>
+                <div class="price"><p>#6.99 / Month</p></div>
                 <div class="plan_features plan2_features">
                     <p>Instant access to all content</p>
                     <p>Exclusive online articles</p>
@@ -311,16 +313,16 @@
                     <img src="resources/Iconify/Cancel.svg" alt="" class="cancel_opacity">
                     <img src="resources/Iconify/Cancel.svg" alt="" class="cancel_opacity">
                 </div>
-                <span class="start_exploring plan2_exploring">
+                <div class="start_exploring plan2_exploring">
                     <p>Start Exploring</p>
-                </span>
+                </div>
             </div>
 
 
 
             <div class="subscription_plan" id="plan3">
                 <h1>Tier 3</h1>
-                <span class="price"><p>$49.9 / Year</p></span>
+                <div class="price"><p>$49.9 / Year</p></div>
                 <div class="plan_features plan3_features">
                     <p>Instant access to all content</p>
                     <p>Exclusive online articles</p>
@@ -338,9 +340,9 @@
                     <img src="resources/Iconify/Tick.svg" alt="">
                     <img src="resources/Iconify/Tick.svg" alt="">
                 </div>
-                <span class="start_exploring plan3_exploring">
+                <div class="start_exploring plan3_exploring">
                     <p>Start Exploring</p>
-                </span>
+                </div>
             </div>
         </div>
     </section>

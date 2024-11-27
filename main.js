@@ -99,9 +99,8 @@ window.addEventListener('scroll', () => {
     const opacity = Math.max(1 - scrollY / 800, 0);
 
     if (window.innerWidth > 1000) {
-        const move_distance = scrollY * Math.pow(1, scrollY * 0.5);
-        left_cloud.style.transform = `translateX(${-move_distance}px)`;
-        right_cloud.style.transform = `translateX(${move_distance}px)`;
+        left_cloud.style.transform = `translateX(${-scrollY}px)`;
+        right_cloud.style.transform = `translateX(${scrollY}px)`;
 
         left_cloud.style.opacity = opacity;
         right_cloud.style.opacity = opacity;
@@ -203,12 +202,12 @@ scroll_left_corners.addEventListener('click', () => {
 
 
 //move page to subscribe area on click
-const subscribe_button = document.getElementById("subscribe_pagelink");
+// const subscribe_button = document.getElementById("subscribe_pagelink");
 
-subscribe_button.addEventListener("click", ()=> {
-    const subscribearea = document.getElementById("subscribe_page");
-    subscribearea.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
-});
+// subscribe_button.addEventListener("click", ()=> {
+//     const subscribearea = document.getElementById("subscribe_page");
+//     subscribearea.scrollIntoView({
+//         behavior: "smooth",
+//         block: "start"
+//     });
+// });

@@ -1,5 +1,5 @@
 html::-webkit-scrollbar{
-width: 0;
+    width: 0;
 }
 
 
@@ -824,6 +824,155 @@ nav{
 
 
 
+
+/* FOOTER PART */
+footer{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    background-color: #000000;
+    justify-content: space-evenly;
+    padding-top: 7vh;
+    padding-left: 4vw;
+    padding-bottom: 10vh;
+}
+.connected_follow{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    width: 20vw;
+}
+.stay_connected{
+    position: relative;
+    width: 19vw;
+    height: 30vh;
+}
+.stay_connected h1{
+    font-family: "Lisu Bosa", serif;
+    font-weight: 1000;
+    color: white;
+    margin-bottom: 5vh;
+}
+.stay_connected p{
+    font-family: "leelawadee", serif;
+    font-weight: 400;
+    color: white;
+}
+.your_email{
+    margin-top: 3vh;
+    width: 16vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    border-bottom: #D9D9D9 2px solid;
+    justify-content: space-between;
+}
+.your_email input{
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 0.5vw;
+    font-family: "leelawadee", serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    background-color: black;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    background-color: transparent;
+}
+.your_email input:focus{
+    outline: none;
+    border: none;
+}
+.your_email img{
+    height: 2.8vh;
+}
+.follow_us{
+    width: 30vw;
+    height: 20vh;
+}
+.follow_image_container{
+    margin-top: 1vh;
+    display: flex;
+    gap: 0.5vw;
+
+}
+.follow_us p{
+    font-family: "leelawadee", serif;
+    font-weight: 400;
+    color: white;
+}
+.our_sites{
+    width: 18vw;
+    display: flex;
+    justify-content: center;
+}
+.site_links{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    gap: 1.2vh;
+}
+.site_links a{
+    width: 12vw;
+    text-decoration: none;
+    color: white;
+    font-family: "leelawadee", serif;
+}
+.our_sites h1{
+    font-family: "Lisu Bosa", serif;
+    font-weight: 1000;
+    color: white;
+}
+.contact_us{
+    width: 30vw;
+}
+.contact_us h1{
+    font-family: "Lisu Bosa", serif;
+    font-weight: 1000;
+    color: white;
+}
+.contact_details{
+    width: 100%;
+    height: 20vh;
+    margin-top: 7vh;
+}
+.footer_detail{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+.footer_detail p{
+    margin-left: 1vw;
+    color: white;
+    font-family: "leelawadee", serif;
+    font-weight: 400;
+}
+.copyright{
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-top: 1px rgba(217, 217, 217, 0.7) solid;
+}
+.copyright img{
+    margin-left: 10vw;
+    height: 60%;
+}
+.copyright p{
+    width: fit-content;
+    margin-left: 5vw;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
 @media (max-width: 1000px) {
     #eagle1 {
         content: url('resources/Home_Page/eagle\ 1\ cut.jpg'); 
@@ -1156,6 +1305,90 @@ nav{
     }
 
 
+
+
+
+
+    /* FOOTER PART */
+    footer{
+        position: relative;
+        padding: 5vh 0;
+        flex-direction: column;
+        padding-bottom: 55vh;
+    }
+    .connected_only{
+        margin-left: 5vw;
+        width: 40vw;
+        font-size: 0.8rem;
+    }
+    .your_email{
+        width: 35vw;
+        
+    }
+    .your_email img{
+        transform: translateX(-8vw);
+    }
+
+    .contact_us{
+        position: absolute;
+        width: 40vw;
+        word-break: break-word;
+        top: 5vh;
+        right: 5vw;
+    }
+    .our_sites{
+        position: absolute;
+        top: 35vh;
+        width: 70vw;
+        margin-left: 15vw;
+    }
+    .our_sites h1{
+        margin-left: 24vw;
+    }
+    .site_links{
+        width: 80vw;
+        height: 17vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .site_links a{
+        width: 40vw;
+    }
+    .contact_details{
+        margin-top: 0;
+    }
+    .contact_us img{
+        margin-right: 2vw;
+        transform: translateY(-0.5vh);
+    }
+    .follow_us{
+        position: absolute;
+        top: 52vh;
+        left: 25vw;
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        flex-direction: column;
+        align-items: center;
+    }
+    .follow_image_container{
+        gap: 5vw;
+    }
+    .follow_image_container img{
+        width: 8vw;
+    }
+    .follow_us p{
+        text-align: center;
+        font-size: 1.5rem;
+        width: 30vw;
+        margin-bottom: 1vh;
+    }
+    .copyright img{
+        display: none;
+    }
+    
+
+
 }
 
 
@@ -1179,6 +1412,12 @@ nav{
 @font-face{
     font-family: 'georegular';
     src: url('fonts/geographwebregular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'leelawadee';
+    src: url('fonts/leelawad.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

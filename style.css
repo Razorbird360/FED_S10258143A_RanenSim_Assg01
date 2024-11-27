@@ -98,6 +98,25 @@ nav{
     color: white;
     cursor: pointer;
 }
+.yellow_overlay{
+    background: linear-gradient(to right, white 50%, yellow 50%);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-in-out;
+}
+.yellow_overlay:hover{
+    background-position: -100%;
+}
+/* #subscribe_pagelink::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5vh;
+    width: 10vw;
+} */
 /* .navbuttons a:hover{
     color: transparent;
 }
@@ -725,6 +744,7 @@ nav{
     display: flex;
     justify-content: center;
     border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .price{
     position: absolute;

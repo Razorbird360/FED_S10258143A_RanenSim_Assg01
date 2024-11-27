@@ -202,12 +202,13 @@ scroll_left_corners.addEventListener('click', () => {
 
 
 //move page to subscribe area on click
-// const subscribe_button = document.getElementById("subscribe_pagelink");
+const subscribe_button = document.getElementById("subscribe_pagelink");
 
-// subscribe_button.addEventListener("click", ()=> {
-//     const subscribearea = document.getElementById("subscribe_page");
-//     subscribearea.scrollIntoView({
-//         behavior: "smooth",
-//         block: "start"
-//     });
-// });
+subscribe_button.addEventListener("click", ()=> {
+    const subscribearea = document.getElementById("subscribe_page");
+    subscribearea.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+

@@ -1,7 +1,16 @@
 html::-webkit-scrollbar{
-    width: 0;
+    background-color: black;
+    width: 1vw;
 }
-
+html::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, yellow);
+    border-radius: 100em;
+    transition: background 0.5s ease-in-out;
+}
+html::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent, rgb(141, 141, 50));
+    border-radius: 100em;
+}
 
 
 
@@ -1338,7 +1347,7 @@ footer{
     }
     .our_sites{
         position: absolute;
-        top: 35vh;
+        top: 37vh;
         width: 70vw;
         margin-left: 15vw;
     }
@@ -1363,7 +1372,7 @@ footer{
     }
     .follow_us{
         position: absolute;
-        top: 52vh;
+        top: 55vh;
         left: 25vw;
         display: flex;
         justify-content: center;

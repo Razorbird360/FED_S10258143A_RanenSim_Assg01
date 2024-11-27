@@ -674,6 +674,10 @@ nav{
 .item_container a:nth-child(6) .corners_item {
     background-image: url(resources/Home_Page/Corners_of_the_world/corner6.jpg);
 }
+
+
+
+
 .subscription {
     background: url(resources/Home_Page/underwater_background.jpeg);
     height: 100vh;
@@ -683,7 +687,27 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 4vh;
 }
+.subscriptions_title{
+    transform: translateY(-3vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subscriptions_title h1{
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 800;
+    font-size: 2.8rem;
+}
+.subscriptions_title h5{
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+
+}
+
 .subscription_plans_container{
     position: relative;
     height: auto;
@@ -1053,6 +1077,13 @@ nav{
         overflow-x: hidden;
     }
 
+
+    .subscription{
+        gap: 0;
+    }
+    .subscriptions_title h1{
+        font-size: 2.2rem;
+    }
     .subscription_plans_container{
         flex-direction: column;
         height: 80vh;

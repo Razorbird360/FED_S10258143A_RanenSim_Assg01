@@ -467,6 +467,7 @@ nav{
     position: relative;
     height: auto;
     width: 100vw;
+    padding-bottom: 13vh;
 }
 .disney_movies img{
     height: 14vh;
@@ -492,7 +493,6 @@ nav{
     gap: 1vw;
     border-radius: 1.5rem;
     box-shadow: rgba(130, 130, 174, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
-    
 }
 .film_item{
     position: relative;
@@ -529,15 +529,22 @@ nav{
     background-size: cover;
 }
 
+
+.latest_interesting_news{
+    background: linear-gradient(to bottom, #000000 0%, #212636 70%, #292E43 100%);
+    padding-bottom: 10vh;
+}
 .horizontal_wrapper{
     position: relative;
     height: auto;
     width: 100vw;
 }
 .scroll_title{
-    width: 100vw;
+    width: 80vw;
     display: flex;
     padding: 10vh 0 0 10vw;
+    display: flex;
+    align-items: center;
 }
 .scroll_title h1{
     color: white;
@@ -551,11 +558,11 @@ nav{
 }
 .item_container{
     width: 80vw;
-    background-color: aliceblue;
     display: flex;
     justify-content: flex-start;
     gap: 1vw;
     overflow-x: auto;
+    scroll-behavior: smooth;
     scrollbar-width: none;
 }
 .scroll_item{
@@ -607,6 +614,65 @@ nav{
 .item_container a:nth-child(5) .scroll_item {
     background-image: url('resources/Home_Page/Latest_stories/story5.jpg');
     background-size: cover;
+}
+.item_container a:nth-child(6) .scroll_item {
+    background-image: url('resources/Home_Page/Latest_stories/story6.jpg');
+    background-size: cover;
+}
+.scroll_buttons{
+    margin-left: 55vw;
+}
+.world_corners{
+    margin-left: 44vw;
+}
+.sbutton{
+    all: unset;
+    width: 1.1vw;
+    height: 4vh;
+}
+#scroll_left{
+    background: url(resources/Iconify/arrow_left.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#scroll_right{
+    margin-left: 1vw;
+    background: url(resources/Iconify/arrow_right.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#scroll_left_corners{
+    background: url(resources/Iconify/arrow_left.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#scroll_right_corners{
+    margin-left: 1vw;
+    background: url(resources/Iconify/arrow_right.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sbutton:focus{
+    outline: revert;
+}
+.item_container a:nth-child(1) .corners_item {
+    background-image: url(resources/Home_Page/Corners_of_the_world/corner1.jpg);
+}
+.item_container a:nth-child(2) .corners_item {
+    background-image: url(resources/Home_Page/Corners_of_the_world/corner2.jpg);
+}
+.item_container a:nth-child(3) .corners_item {
+    background-image: url(resources/Home_Page/Corners_of_the_world/corner3.jpg);
+}
+.item_container a:nth-child(4) .corners_item {
+    background-image: url(resources/Home_Page/Corners_of_the_world/corner4.jpg);
+}
+.item_container a:nth-child(5) .corners_item {
+    background-image: url(resources/Home_Page/Corners_of_the_world/corner5.jpg);
+}
+.item_container a:nth-child(6) .corners_item {
+    background-image: url(resources/Home_Page/Corners_of_the_world/corner6.jpg);
 }
 
 
@@ -845,6 +911,7 @@ nav{
         justify-content: flex-start;
         align-items: center;
         margin-top: 0;
+        scroll-behavior: smooth;
     }
     .film_item{
         min-width: 40vw;
@@ -857,10 +924,42 @@ nav{
     .scroll_item{
         height: 30vh;
         min-width: 75vw;
+        border-radius: 1em;
+    }
+    .scroll_item span{
+        border-radius: 1em;
     }
     .scroll_container{
         overflow-x: hidden;
     }
+    .sbutton{
+        width: 3vw;
+        height: 3vh;
+    }
+    .scroll_buttons{
+        margin-left: 16vw;
+    }
+    .scroll_title h1{
+        width: 50vw;
+        font-size: 1.8rem;
+    }
+    .disney_movies{
+        padding-bottom: 5vh;
+    }
+    .scroll_title{
+        padding: 5vh 0 0 10vw;
+    }
+    .latest_interesting_news{
+        padding-bottom: 6vh;
+    }
+    .horizontal_wrapper, .scroll_container{
+        padding-left: 1.5vw;
+    }
+    .latest_interesting_news{
+        overflow-x: hidden;
+    }
+
+
 
 }
 

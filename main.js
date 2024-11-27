@@ -96,7 +96,7 @@ const right_cloud = document.getElementById('right_cloud');
 
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const opacity = Math.max(1 - scrollY / 750, 0);
+    const opacity = Math.max(1 - scrollY / 800, 0);
 
     if (window.innerWidth > 1000) {
         const move_distance = scrollY * Math.pow(1, scrollY * 0.5);
@@ -133,3 +133,70 @@ mute_checkbox.addEventListener('change', ()=> {
 
 
 
+//button to scroll latest stories
+const scroll_container = document.querySelector('.item_container');
+const scroll_left = document.getElementById('scroll_left');
+const scroll_right = document.getElementById('scroll_right');
+
+scroll_right.addEventListener('click', () => {
+    if (window.innerWidth > 1000) {
+        scroll_container.scrollBy({
+            left: 2000,
+            behavior: 'smooth'
+        });
+    } else {
+        scroll_container.scrollBy({
+            left: 365,
+            behavior: 'smooth'
+        });
+    }
+});
+
+
+scroll_left.addEventListener('click', () => {
+    if (window.innerWidth > 1000) {
+        scroll_container.scrollBy({
+            left: -2000,
+            behavior: 'smooth'
+        });
+    } else {
+        scroll_container.scrollBy({
+            left: -365,
+            behavior: 'smooth'
+        });
+    }
+});
+
+//button to scroll corners of the world
+const scroll_container_corners = document.querySelector('.world_corners_container');
+const scroll_left_corners = document.getElementById('scroll_left_corners');
+const scroll_right_corners = document.getElementById('scroll_right_corners');
+
+scroll_right_corners.addEventListener('click', () => {
+    if (window.innerWidth > 1000) {
+        scroll_container_corners.scrollBy({
+            left: 2000,
+            behavior: 'smooth'
+        });
+    } else {
+        scroll_container_corners.scrollBy({
+            left: 365,
+            behavior: 'smooth'
+        });
+    }
+});
+
+
+scroll_left_corners.addEventListener('click', () => {
+    if (window.innerWidth > 1000) {
+        scroll_container_corners.scrollBy({
+            left: -2000,
+            behavior: 'smooth'
+        });
+    } else {
+        scroll_container_corners.scrollBy({
+            left: -365,
+            behavior: 'smooth'
+        });
+    }
+});

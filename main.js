@@ -1,3 +1,4 @@
+//search bar
 const openIcon = document.querySelector('#search_icon');
 const closeIcon = document.querySelector('#cancel_icon');
 const container = document.querySelector('.search_container');
@@ -19,7 +20,7 @@ closeIcon.addEventListener('click', ()=>{
 });
 
 
-
+//countdown timer for front page
 let now = new Date();
 
 let UpcomingDay = new Date(
@@ -66,7 +67,7 @@ setInterval(function(){
     CountdownDate(UpcomingDay);
 }, 1000);
 
-
+//navbar
 document.getElementById('select_box').addEventListener('change', function () {
     if (this.value) {
         window.location.href = this.value;
@@ -86,3 +87,49 @@ function open_dropdown() {
     dropdown.focus();
 }
 menu_carot.addEventListener('click', open_dropdown);
+
+
+
+//cloud interactivity
+const left_cloud = document.getElementById('left_cloud');
+const right_cloud = document.getElementById('right_cloud');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const opacity = Math.max(1 - scrollY / 750, 0);
+
+    if (window.innerWidth > 1000) {
+        const move_distance = scrollY * Math.pow(1, scrollY * 0.5);
+        left_cloud.style.transform = `translateX(${-move_distance}px)`;
+        right_cloud.style.transform = `translateX(${move_distance}px)`;
+
+        left_cloud.style.opacity = opacity;
+        right_cloud.style.opacity = opacity;
+    }
+    else {
+        left_cloud.style.transform = '';
+        right_cloud.style.transform = '';
+    }
+});
+
+
+//mute button
+const mute_image = document.getElementById('mute_image');
+const mute_checkbox = document.getElementById('toggle_mute');
+const animals_video = document.getElementById('animals_video');
+const muted = 'resources/Iconify/mute.svg';
+const unmuted = 'resources/Iconify/audio.svg';
+
+
+mute_checkbox.addEventListener('change', ()=> {
+   if (mute_checkbox.checked) {
+    mute_image.src = unmuted;
+    animals_video.muted = false;
+   } else {
+    mute_image.src = muted;
+    animals_video.muted = true;
+   }
+});
+
+
+

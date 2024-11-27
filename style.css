@@ -32,6 +32,7 @@ body{
 .navbar_icon{
     width: 2vw;
     transition: width 0.5s ease-in-out;
+    cursor: pointer;
 }
 #cancel_icon{
     min-width: 2vw;
@@ -96,13 +97,31 @@ nav{
     text-decoration: none;
     color: white;
 }
+/* .navbuttons a:hover{
+    color: transparent;
+}
+.navbuttons a::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background: yellow; 
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
+} */
+
+.navbuttons a:hover::before {
+    left: 0;
+    z-index: -1;
+}
 #home_search{
     position: absolute;
     right: 42vw;
     top: 10vh;
     text-decoration: none;
     color: white;
-
 }
 .select_container{
     display: flex;
@@ -122,7 +141,7 @@ nav{
     background-color: rgb(204, 255, 0);
     appearance: none;
     text-align: center;
-
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,6 +339,7 @@ nav{
     
 } */
 .netflix_shows{
+    padding-top: 5vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -327,7 +347,7 @@ nav{
 }
 .trending_shows_title{
     display: flex;
-    padding: 20vh 0 0 10vw;
+    padding: 15vh 0 0 10vw;
     width: 100vw;
     align-items: center;
 }
@@ -354,9 +374,25 @@ nav{
 }
 .netflix_video{
     position: relative;
-     width: 80vw; /*change this to change video and content width */
+    width: 80vw;
     display: flex;
     justify-content: center;
+}
+#toggle_mute{
+    display: none;
+}
+#audio_button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(81, 52, 52, 0.6);
+    border-radius: 50%;
+}
+#audio_button img{
+    width: 2vw;
+    cursor: pointer;
 }
 .animals_trailer video{
     border-radius: 1em;
@@ -428,18 +464,155 @@ nav{
 }
 
 .disney_movies{
+    position: relative;
     height: auto;
     width: 100vw;
 }
 .disney_movies img{
     height: 14vh;
 }
-
-
-
-
-@media (max-width: 932px) {
+.disney_title{
+    margin-top: 0;
+    padding: 10vh 0 0 10vw;
+}
+.disney_shows{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.disney_wrapper{
+    padding: 5vh 3vw;
+    margin-top: 2vh;
+    width: 80vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    border-radius: 1.5rem;
+    box-shadow: rgba(130, 130, 174, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
     
+}
+.film_item{
+    position: relative;
+    width: 12vw;
+    height: 28vh;
+    cursor: pointer;
+}
+.film_item:nth-child(1) {
+    background-image: url('resources/Home_Page/Disney_films/film1.jpg');
+    background-size: cover;
+}
+.film_item:nth-child(2) {
+    background-image: url('resources/Home_Page/Disney_films/film2.jpg');
+    background-size: cover;
+}
+.film_item:nth-child(3) {
+    background-image: url('resources/Home_Page/Disney_films/film3.jpg');
+    background-size: cover;
+}
+.film_item:nth-child(4) {
+    background-image: url('resources/Home_Page/Disney_films/film4.jpg');
+    background-size: cover;
+}
+.film_item:nth-child(5) {
+    background-image: url('resources/Home_Page/Disney_films/film5.jpg');
+    background-size: cover;
+}
+.film_item:nth-child(6) {
+    background-image: url('resources/Home_Page/Disney_films/film6.jpg');
+    background-size: cover;
+}
+.film_item:nth-child(7) {
+    background-image: url('resources/Home_Page/Disney_films/film7.jpg');
+    background-size: cover;
+}
+
+.horizontal_wrapper{
+    position: relative;
+    height: auto;
+    width: 100vw;
+}
+.scroll_title{
+    width: 100vw;
+    display: flex;
+    padding: 10vh 0 0 10vw;
+}
+.scroll_title h1{
+    color: white;
+    font-family: "Julius Sans One", serif;
+    font-weight: 400;
+}
+.scroll_container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.item_container{
+    width: 80vw;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1vw;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.scroll_item{
+    position: relative;
+    height: 33vh;
+    min-width: 26vw;
+    background-color: #CFBE43;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.scroll_item p{
+    width: 80%;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-family: "Average Sans", serif;
+    font-size: 1.3rem;
+    margin-bottom: 2vh; 
+}
+.scroll_item span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) , rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0));
+}
+.item_container a{
+    text-decoration: none;
+}
+.item_container a:nth-child(1) .scroll_item {
+    background-image: url('resources/Home_Page/Latest_stories/story1.jpg');
+    background-size: cover;
+}
+.item_container a:nth-child(2) .scroll_item {
+    background-image: url('resources/Home_Page/Latest_stories/story2.jpg');
+    background-size: cover;
+}
+.item_container a:nth-child(3) .scroll_item {
+    background-image: url('resources/Home_Page/Latest_stories/story3.jpg');
+    background-size: cover;
+}
+.item_container a:nth-child(4) .scroll_item {
+    background-image: url('resources/Home_Page/Latest_stories/story4.jpg');
+    background-size: cover;
+}
+.item_container a:nth-child(5) .scroll_item {
+    background-image: url('resources/Home_Page/Latest_stories/story5.jpg');
+    background-size: cover;
+}
+
+
+
+
+@media (max-width: 1000px) {
     #eagle1 {
         content: url('resources/Home_Page/eagle\ 1\ cut.jpg'); 
         width: 100vw;
@@ -513,7 +686,12 @@ nav{
         margin-right: 4vw;
         font-size: 15px;
     }
-
+    #audio_button{
+        margin: 0.5rem;
+    }
+    #audio_button img{
+        width: 6vw;
+    }
     /* .nav_explore::after {
         content: '';
         position: absolute;
@@ -587,8 +765,8 @@ nav{
 
 
     .cloud {
-        
-        top: 92vh;
+        pointer-events: none;
+        top: 100vh;
         position: absolute;
     }
 
@@ -608,14 +786,17 @@ nav{
     .animals_trailer{
         height: 20vh; 
     }
+    .netflix_shows{
+        padding-top: 2vh;
+    }
     .netflix_video{
         width: 90vw;
     }
     .netflix_overlay{
         background: linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 0.1) 0%,   
-            rgba(0, 0, 0, 0.5) 40%, 
+            rgba(0, 0, 0, 0.15) 0%,   
+            rgba(0, 0, 0, 0.6) 40%, 
             rgba(0, 0, 0, 0.8) 60%, 
             rgba(0, 0, 0, 1) 100%
           );
@@ -655,6 +836,32 @@ nav{
         height: 9vh;
         margin-bottom: 1vh;
     }
+    .disney_wrapper{
+        height: auto;
+        padding: 2vh 5vw;
+        overflow-x: auto;
+        gap: 5vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 0;
+    }
+    .film_item{
+        min-width: 40vw;
+        height: 26vh;
+    }
+
+    .item_container{
+        gap: 10vw;
+    }
+    .scroll_item{
+        height: 30vh;
+        min-width: 75vw;
+    }
+    .scroll_container{
+        overflow-x: hidden;
+    }
+
 }
 
 

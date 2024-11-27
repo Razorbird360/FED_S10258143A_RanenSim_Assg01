@@ -98,7 +98,7 @@
 
             <div class="animals_trailer">
                 <div class="netflix_video">
-                    <video src="resources/Home_Page/Animals_Trailer.mp4" autoplay loop muted></video>
+                    <video src="resources/Home_Page/Animals_Trailer.mp4" autoplay loop muted id="animals_video"></video>
                     <div class="netflix_overlay"></div>
                     <div class="netflix_desc">
                         <h1>Earth's Hidden Kingdoms</h1>
@@ -112,16 +112,70 @@
                             <img src="resources/Iconify/star_half.svg" alt="half star icon" class="star">
                         </div>
                     </div>
+                    <label id="audio_button">
+                        <input type="checkbox" id="toggle_mute">
+                        <img src="resources/Iconify/mute.svg" alt="" id="mute_image">
+                    </label>
                 </div>
             </div>
         </div>
 
         <div class="disney_movies">
-            <header class="trending_shows_title">
+            <header class="disney_title trending_shows_title">
                 <h2>Discover more on</h2>
                 <img src="resources/Icons/Disney_logo.png" alt="Netflix">
             </header>
 
+            <div class="disney_shows">
+                <div class="disney_wrapper">
+                    <div class="film_item"></div>
+                    <div class="film_item"></div>
+                    <div class="film_item"></div>
+                    <div class="film_item"></div>
+                    <div class="film_item"></div>
+                    <div class="film_item"></div>
+                    <div class="film_item"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="horizontal_wrapper">
+            <header class="scroll_title">
+                <h1>Latest Stories</h1>
+            </header>
+
+            <div class="scroll_container">
+                <div class="item_container">
+                    <a href="">
+                        <div class="scroll_item">
+                            <p>How a sacred tie with Native Americans is restoring bison to indigenous lands</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="scroll_item">
+                            <p>Kangaroos in the clouds? How to protect this ghostly species</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="scroll_item">
+                            <p>Why the world's biggest shark needs protection from microplastics
+                            </p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="scroll_item">
+                            <p>After four decades, the chequered skipper makes a stealthy return to England
+                            </p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="scroll_item">
+                            <p>This unlikely friendship between a grey wolf and brown bear defies nature</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
 
 

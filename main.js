@@ -102,8 +102,10 @@ menu_carot.addEventListener('click', open_dropdown);
 
 //cloud interactivity, pulls cloud to the side and decreases opacity when scrolling down, and back when scrolling up
 //else it makes the cloud static on mobile view (it kinda affects scrolling sometimes if not static)
+//edit: eagle also moves up when scrolling down, scroll value is multiplied by 0.4 to make it move slower
 const left_cloud = document.getElementById('left_cloud');
 const right_cloud = document.getElementById('right_cloud');
+const eagle = document.getElementById('eagle1');
 
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
@@ -112,6 +114,7 @@ window.addEventListener('scroll', () => {
     if (window.innerWidth > 1000) {
         left_cloud.style.transform = `translateX(${-scrollY}px)`;
         right_cloud.style.transform = `translateX(${scrollY}px)`;
+        eagle.style.transform = `translateY(${scrollY * 0.4}px)`;
 
         left_cloud.style.opacity = opacity;
         right_cloud.style.opacity = opacity;

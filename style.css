@@ -125,6 +125,9 @@ nav{
 .yellow_overlay:hover{
     background-position: -100%;
 }
+#subscribe_page{
+    overflow: hidden;
+}
 /* #subscribe_pagelink::before{
     content: '';
     position: absolute;
@@ -255,6 +258,7 @@ nav{
     height: 90vh;
     width: 100vw;
     background-color: black;
+    overflow: hidden;
 }
 #eagle1{
     height: 90vh;
@@ -569,6 +573,7 @@ nav{
 .latest_interesting_news{
     background: linear-gradient(to bottom, #000000 0%, #212636 70%, #292E43 100%);
     padding-bottom: 10vh;
+    overflow: hidden;
 }
 .horizontal_wrapper{
     position: relative;
@@ -1321,12 +1326,13 @@ footer{
     /* FOOTER PART */
     footer{
         position: relative;
-        padding: 5vh 0;
+        padding-top: 5vh;
         flex-direction: column;
-        padding-bottom: 55vh;
+        padding-bottom: 52vh;
+        overflow: hidden;
     }
     .connected_only{
-        margin-left: 5vw;
+        margin-left: 3vw;
         width: 40vw;
         font-size: 0.8rem;
     }
@@ -1343,13 +1349,15 @@ footer{
         width: 40vw;
         word-break: break-word;
         top: 5vh;
-        right: 5vw;
+        right: 8vw;
+        font-size: 0.8rem;
     }
     .our_sites{
         position: absolute;
-        top: 37vh;
+        top: 32vh;
         width: 70vw;
-        margin-left: 15vw;
+        margin-left: 13vw;
+        font-size: 0.9rem;
     }
     .our_sites h1{
         margin-left: 24vw;
@@ -1372,13 +1380,14 @@ footer{
     }
     .follow_us{
         position: absolute;
-        top: 55vh;
-        left: 25vw;
+        top: 52vh;
+        left: 21vw;
         display: flex;
         justify-content: center;
         width: 50vw;
         flex-direction: column;
         align-items: center;
+        font-size: 0.8rem;
     }
     .follow_image_container{
         gap: 5vw;

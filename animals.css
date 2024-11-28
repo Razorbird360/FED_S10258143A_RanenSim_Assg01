@@ -1,3 +1,21 @@
+/* style scrollbar */
+
+html::-webkit-scrollbar {
+    background-color: black;
+    width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, yellow);
+    border-radius: 100em;
+    transition: background 0.5s ease-in-out;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, rgb(141, 141, 50));
+    border-radius: 100em;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +24,10 @@ body{
     width: 100vw;
     height: auto;
     overflow-x: hidden;
+}
+.animals_header{
+    position: relative;
+    width: 100vw;
 }
 .logo_header{
     position: relative;
@@ -21,6 +43,28 @@ body{
     height: 5.5vh;
 }
 
+.backlink{
+    position: absolute;
+    top: 2.9vh;
+    left: 3vw;
+    display: flex;
+    align-items: center;
+}
+.backlink a{
+    text-decoration: none;
+    color: white;
+    font-family: "georegular", serif;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+.backlink img{
+    height: 3vh;
+    margin-right: 0.2vw;
+}
+.backlink a:hover{
+    text-decoration: underline;
+}
 
 .right_align_search{
     position: absolute;
@@ -172,9 +216,9 @@ body{
     content: '';
     position: absolute;
     top: 2vh;
-    left: 9vw;
+    left: 8.5vw;
     height: 8vh;
-    width: 0.4vw;
+    width: 0.35vw;
     background-color: #FFCC00;
 }
 
@@ -187,8 +231,100 @@ body{
 }
 
 
+.news_articles{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    background-color: black;
+}
+
+/* minus the view height of logo header, animals page and padding to fill the remaining space */
+.head_article{
+    width: 100vw;
+    padding-top: 5vh;
+    height: calc(100vh - 8vh - 35vh - 5vh);
+    display: flex;
+
+}
+.ha_sidetext, .ha_image{
+    width: 50%;
+    height: 100%;
+}
+.ha_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ha_image img{
+    width: 80%;
+    height: 100%;
+    margin-right: 10%;
+}
+.ha_sidetext {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.ha_sidetext h2{
+    margin-top: 10vh;
+    width: 70%;
+    font-family: "geomedium", serif;
+    font-weight: 200;
+    font-size: 2rem;
+    color: white;
+}
+.ha_sidetext h5{
+    margin-top: 6vh;
+    width: 70%;
+    font-family: "leelawadee", serif;
+    font-weight: 200;
+    font-size: 1.1rem;
+    color: white;
+}
+.read_more{
+    position: relative;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    width: fit-content;
+    padding: 1rem 2.5rem;
+    background-color: #FFCC00;
+    border-radius: 0.5rem;
+    z-index: 0;
+    overflow: hidden;
+}
+.read_more p{
+    color: black;
+    font-family: "geooblique", serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    z-index: 1;
+}
+.read_more::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    border-radius: 0 0 70% 70%;
+    background-color: rgb(172, 172, 227);
+    transition: height 0.4s ease-in-out;
+    z-index: -1;
+}
+.read_more:hover::before{
+    height: 180%;
+}
+
+
+
+
+
 @media (max-width: 1000px) {
 
+    .backlink{
+        display: none;
+    }
     .search_container{
         width: 35vw;
     }
@@ -235,7 +371,7 @@ body{
         font-size: 2.5rem;
     }
     .page_title h1::after{
-        left: 8vw;
+        left: 6.5vw;
         width: 1vw;
         height: 6vh;
     }
@@ -283,6 +419,12 @@ body{
 @font-face{
     font-family: 'leelawadee';
     src: url('fonts/leelawad.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'geooblique';
+    src: url('fonts/Geo\ Oblique.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

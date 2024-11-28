@@ -19,3 +19,19 @@ closeIcon.addEventListener('click', ()=>{
         closeIcon.src = "resources/Iconify/Cancel.svg"
     },500)
 });
+
+
+//change video source for discover page, as css content can only be used for images
+//video changes to a cut version for phone media query
+function changevideo() {
+    const video = document.getElementById('videobg');
+    if (window.innerWidth < 1000) {
+        video.src = "resources/Animals_Page/Bg_animals_cut.mp4";
+    } else {
+        video.src = "resources/Animals_Page/Bg_animals.mp4";
+    }
+
+    video.load();
+}
+changevideo();
+window.addEventListener("resize", changevideo);

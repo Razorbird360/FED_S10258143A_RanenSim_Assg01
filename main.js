@@ -114,7 +114,7 @@ window.addEventListener('scroll', () => {
     if (window.innerWidth > 1000) {
         left_cloud.style.transform = `translateX(${-scrollY}px)`;
         right_cloud.style.transform = `translateX(${scrollY}px)`;
-        eagle.style.transform = `translateY(${scrollY * 0.4}px)`;
+        eagle.style.transform = `translateY(${scrollY * 0.5}px)`;
 
         left_cloud.style.opacity = opacity;
         right_cloud.style.opacity = opacity;

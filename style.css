@@ -113,13 +113,15 @@ javascript is used to add and remove classlist for hiding search bar */
 }
 
 
-/* navigation bar and nat geo logo styling */
+/* navigation bar and nat geo logo styling, z index changed to be higher than eagle image */
 nav {
+    position: relative;
     width: 100vw;
     height: 10vh;
     background-color: black;
     display: flex;
     align-items: flex-end;
+    z-index: 1;
 }
 
 #natgeologo {
@@ -238,7 +240,9 @@ effect will start from the left to the right over 0.5s */
 /* style elements for eagle and show_details,
 then style the time on the first page */
 #eagle1 {
+    position: relative;
     height: 90vh;
+    z-index: 0;
 }
 
 .show_details {

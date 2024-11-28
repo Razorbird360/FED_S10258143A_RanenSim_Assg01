@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: auto;
+}
+.logo_header{
+    position: relative;
+    width: 100vw;
+    height: 8vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #D9D9D9;
+}
+#natgeologo{
+    height: 5.5vh;
+}
+
+
+.right_align_search{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4.2vh;
+    margin-left: 46vw;
+    
+}
+.search_bar{
+    background-color: white;
+    position: absolute;
+    width: fit-content;
+    height: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.hide_bar_bg{
+    background-color: transparent;
+}
+.navbar_icon{
+    width: 2vw;
+    transition: width 0.5s ease-in-out;
+    cursor: pointer;
+}
+#cancel_icon{
+    min-width: 2vw;
+    width: 2vw;
+}
+.search_container{
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+#search_input{
+    width: 12vw;
+    border: none;
+    outline: none;
+    color: black;
+    font-family: "Average Sans", serif;
+}
+#search_input::placeholder{
+    color: rgb(47, 201, 17);
+}
+.hide_container{
+    width: 0;
+    overflow: hidden;
+    pointer-events: none;
+    color: black;
+}
+
+.animals_page{
+    background-color: rgb(71, 145, 211);
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.animals_page{
+    width: 100vw;
+}
+.navbar{
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 8vh;
+    color: white;
+    font-family: "georegular", serif;
+    background-color: chartreuse;
+    gap: 5vw;
+}
+#current_nav{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 100rem;
+    font-family: 'georegular', serif;
+    color: white;
+    margin-left: 5vw;
+}
+.navbar a{
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+
+}
+.page_title{
+    position: relative;
+    background-color: blanchedalmond;
+}
+.page_title h1{
+    margin-left: 10vw;
+    font-family: "geobold", serif;
+    font-size: 2.7rem;
+}
+.page_title h1::after{
+    content: '';
+    position: absolute;
+    top: 2vh;
+    left: 0;
+    height: 10vh;
+    width: 0.5vw;
+    background-color: chartreuse;
+}
+
+
+
+
+
+
+
+
+
+
+@font-face{
+    font-family: 'geomedium';
+    src: url('fonts/geographwebmedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'geobold';
+    src: url('fonts/geographeditwebbold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'georegular';
+    src: url('fonts/geographwebregular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'leelawadee';
+    src: url('fonts/leelawad.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

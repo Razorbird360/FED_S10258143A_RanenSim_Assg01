@@ -1,3 +1,9 @@
+//ensure page starts at the top
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+});
+
+
 //search bar
 const openIcon = document.querySelector('#search_icon');
 const closeIcon = document.querySelector('#cancel_icon');

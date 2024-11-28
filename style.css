@@ -1,36 +1,59 @@
-html::-webkit-scrollbar{
+/* style scrollbar */
+
+html::-webkit-scrollbar {
     background-color: black;
     width: 1vw;
 }
-html::-webkit-scrollbar-thumb{
+
+html::-webkit-scrollbar-thumb {
     background: linear-gradient(transparent, yellow);
     border-radius: 100em;
     transition: background 0.5s ease-in-out;
 }
-html::-webkit-scrollbar-thumb:hover{
+
+html::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(transparent, rgb(141, 141, 50));
     border-radius: 100em;
 }
 
+/* reset default margins and paddings */
 
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    animation: textappear 0.3s;
 }
-.right_align_search{
+@keyframes textappear {
+    0%{
+        transform: scale(0);
+        opacity: 0%;
+    }
+    30%{
+        opacity: 10%;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 100%;
+    }
+}
+
+
+/* fix search bar positions using relative container and absolute position for search bar */
+.right_align_search {
     position: relative;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 4.2vh;
     margin-left: 46vw;
 }
-.search_bar{
+
+.search_bar {
     background-color: white;
     position: absolute;
     width: fit-content;
@@ -40,21 +63,28 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-.hide_bar_bg{
+
+.hide_bar_bg {
     background-color: transparent;
 }
-.navbar_icon{
+
+.navbar_icon {
     width: 2vw;
     transition: width 0.5s ease-in-out;
     cursor: pointer;
 }
-#cancel_icon{
+
+/* make search extension appear by changing width of search container when clicked, as width is 0 before clicking
+javascript is used to add and remove classlist for hiding search bar */
+
+#cancel_icon {
     min-width: 2vw;
     width: 2vw;
 }
-.search_container{
+
+.search_container {
     width: 15vw;
     display: flex;
     align-items: center;
@@ -62,34 +92,42 @@ body{
     overflow: hidden;
     transition: 0.5s ease-in-out;
 }
-#search_input{
+
+#search_input {
     width: 12vw;
     border: none;
     outline: none;
     color: black;
     font-family: "Average Sans", serif;
 }
-#search_input::placeholder{
+
+#search_input::placeholder {
     color: rgb(47, 201, 17);
 }
-.hide_container{
+
+.hide_container {
     width: 0;
     overflow: hidden;
     pointer-events: none;
     color: black;
 }
-nav{
+
+
+/* navigation bar and nat geo logo styling */
+nav {
     width: 100vw;
     height: 10vh;
     background-color: black;
     display: flex;
     align-items: flex-end;
 }
-#natgeologo{
+
+#natgeologo {
     margin: 0 0 1vh 3vw;
     width: 10vw;
 }
-.navbar_right{
+
+.navbar_right {
     width: 30vw;
     height: 12vh;
     display: flex;
@@ -99,7 +137,8 @@ nav{
     top: 0;
     justify-content: space-between;
 }
-.navbuttons{
+
+.navbuttons {
     margin-bottom: 1vh;
     position: relative;
     font-family: georegular;
@@ -109,12 +148,17 @@ nav{
     width: 14vw;
     justify-content: space-between;
 }
-.navbuttons a, #subscribe_pagelink{
+
+.navbuttons a,
+#subscribe_pagelink {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
-.yellow_overlay{
+
+/* create a hover effect for the nav buttons by adding a background color when hovering
+effect will start from the left to the right over 0.5s */
+.yellow_overlay {
     background: linear-gradient(to right, white 50%, yellow 50%);
     background-size: 200%;
     background-clip: text;
@@ -122,54 +166,26 @@ nav{
     -webkit-text-fill-color: transparent;
     transition: 0.5s ease-in-out;
 }
-.yellow_overlay:hover{
+
+.yellow_overlay:hover {
     background-position: -100%;
 }
-#subscribe_page{
+
+/* remove unnessacery overflow elements if any */
+#subscribe_page {
     overflow: hidden;
 }
-/* #subscribe_pagelink::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 5vh;
-    width: 10vw;
-} */
-/* .navbuttons a:hover{
-    color: transparent;
-}
-.navbuttons a::before {
-    content: ''; 
-    position: absolute;
-    top: 0;
-    left: -100%; 
-    width: 100%;
-    height: 100%;
-    background: yellow; 
-    transition: all 0.3s ease-in-out;
-    z-index: 0;
-} */
 
-.navbuttons a:hover::before {
-    left: 0;
-    z-index: -1;
-}
-#home_search{
-    position: absolute;
-    right: 42vw;
-    top: 10vh;
-    text-decoration: none;
-    color: white;
-}
-.select_container{
+/* style the navbar to change html pages, which is a select forms list */
+.select_container {
     display: flex;
     justify-content: center;
     position: relative;
     height: auto;
     text-align: center;
 }
-#select_box{
+
+#select_box {
     padding: 0 2rem 0 0;
     margin-right: 2vw;
     height: 5vh;
@@ -186,7 +202,8 @@ nav{
     align-items: center;
     font-family: georegular;
 }
-.select_icon_container{
+
+.select_icon_container {
     width: 50px;
     height: 100%;
     position: absolute;
@@ -196,74 +213,35 @@ nav{
     justify-items: center;
     margin-right: 0.6vw;
 }
-.select_icon_container{
+
+.select_icon_container {
     font-size: 15px;
 }
-#menu_carot{
+
+/*turn dropdown menu icon when menu is opened, javascript used to add/remove classlist for rotation */
+#menu_carot {
     transition: transform 0.3s ease-in-out;
     pointer-events: none;
 }
-#menu_carot.rotate{
+
+#menu_carot.rotate {
     transform: rotate(-180deg);
 }
 
-/* .nav_explore::after{
-    content: '';
-    position: absolute;
-    top: -2.2vh;
-    right: -0.7vw;
-    width: 8vw;
-    height: 7vh;
-    border: 1px white solid;
-    border-radius: 2vh;
-    pointer-events: none;
-} */
- /* .nav_explore{
-    background-color: aliceblue;
-    position: relative;
-}
- .div_explore{
-    width: 10vw;
-    height: 10vh;
-    background-color: #CFBE43;
- }
- .dropdown{
-    box-sizing: border-box;
- }
- .selected{
-    position: absolute;
-    top: 0;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px #2a2f3b solid;
-    border-radius: 0.5em;
-    padding: 1em;
-    cursor: pointer;
-    transition: background 0.3s;
- }
-#div_explore{
-    display: flex;
-}
-#div_explore i{
-    color: white;
-    margin-left: 1vw;
-    
-} */
-
-
-
-.shows_header{
+.shows_header {
     height: 90vh;
     width: 100vw;
     background-color: black;
     overflow: hidden;
 }
-#eagle1{
+
+/* style elements for eagle and show_details,
+then style the time on the first page */
+#eagle1 {
     height: 90vh;
 }
-.show_details{
+
+.show_details {
     position: absolute;
     width: 40vw;
     height: 50vh;
@@ -272,7 +250,8 @@ nav{
     display: flex;
     flex-direction: column;
 }
-.show_details h1{
+
+.show_details h1 {
     text-align: center;
     position: relative;
     font-family: "Luckiest Guy", cursive;
@@ -282,7 +261,8 @@ nav{
     font-size: 4rem;
     margin: 0;
 }
-.show_details h5{
+
+.show_details h5 {
     text-align: center;
     position: relative;
     font-family: "Space Mono", serif;
@@ -291,14 +271,16 @@ nav{
     font-size: 1.7rem;
     color: white;
 }
-.show_details h3{
+
+.show_details h3 {
     text-align: center;
     font-size: 2.1rem;
     font-family: "Irish Grover", serif;
     margin-top: 7vh;
     color: #CFBE43;
 }
-.time_container{
+
+.time_container {
     position: relative;
     margin-top: 3vh;
     width: 90%;
@@ -307,11 +289,13 @@ nav{
     display: flex;
     justify-content: space-between;
 }
-.time_block{
+
+.time_block {
     display: flex;
     flex-direction: column;
 }
-.time_block p{
+
+.time_block p {
     margin-left: 1.55vw;
     width: 10vw;
     position: absolute;
@@ -322,11 +306,13 @@ nav{
     font-family: "Space Mono", serif;
     letter-spacing: 3.3vw;
 }
-.time_number_group{
+
+.time_number_group {
     display: flex;
     gap: 5px;
 }
-.time_number{
+
+.time_number {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -336,73 +322,67 @@ nav{
     background-color: #513434;
     border-radius: 15px;
 }
-.time_label{
+
+.time_label {
     font-family: "Space Mono", serif;
     text-align: center;
     font-size: 1.5rem;
     color: white;
 }
-.cloud{
+
+/*style cloud size to ensure they barely touch each other and can move away
+javascript is used to move clouds away from each other */
+.cloud {
     width: 100vw;
     position: absolute;
     display: flex;
     justify-content: center;
     top: 70vh;
 }
-.cloud_item{
+
+.cloud_item {
     width: 50vw;
 }
 
 
-
-.trending_shows{
+/* style trending shows page, including netflix and disney areas */
+.trending_shows {
     height: auto;
     width: 100vw;
     background: url(resources/Home_Page/Figma\ mesh.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* .trending_shows::before{
-    content: '';
-    position: absolute;
-    top: 100vh;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.4) 70%,
-        rgba(0, 0, 0, 0.5) 100%
-    );
-    z-index: 0;
-    
-} */
-.netflix_shows{
+
+.netflix_shows {
     padding-top: 5vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    
+
 }
-.trending_shows_title{
+
+.trending_shows_title {
     display: flex;
     padding: 15vh 0 0 10vw;
     width: 100vw;
     align-items: center;
 }
-.trending_shows_title h2{
+
+.trending_shows_title h2 {
     letter-spacing: 2px;
     font-size: 2rem;
     color: white;
     font-family: "Julius Sans One", serif;
 }
-.trending_shows_title img{
+
+.trending_shows_title img {
     margin-left: 1vw;
     width: 12vw;
     height: 8vh;
 }
-.animals_trailer{
+
+.animals_trailer {
     margin-top: 5vh;
     position: relative;
     width: 100vw;
@@ -412,16 +392,20 @@ nav{
     align-items: center;
 
 }
-.netflix_video{
+
+.netflix_video {
     position: relative;
     width: 80vw;
     display: flex;
     justify-content: center;
 }
-#toggle_mute{
+
+/* change display of mute button when clicked, javscript also used for this part */
+#toggle_mute {
     display: none;
 }
-#audio_button{
+
+#audio_button {
     position: absolute;
     top: 0;
     left: 0;
@@ -430,11 +414,13 @@ nav{
     background-color: rgba(81, 52, 52, 0.6);
     border-radius: 50%;
 }
-#audio_button img{
+
+#audio_button img {
     width: 2vw;
     cursor: pointer;
 }
-.animals_trailer video{
+
+.animals_trailer video {
     border-radius: 1em;
     display: block;
     margin: auto;
@@ -443,22 +429,23 @@ nav{
     object-fit: cover;
 }
 
-.netflix_overlay{
+
+/* style overlay for netflix, so that people can read text on the right */
+.netflix_overlay {
     border-radius: 1em;
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.1) 0%,   
-        rgba(0, 0, 0, 0.5) 40%, 
-        rgba(0, 0, 0, 0.8) 60%, 
-        rgba(0, 0, 0, 1) 100%
-      );
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.5) 40%,
+            rgba(0, 0, 0, 0.8) 60%,
+            rgba(0, 0, 0, 1) 100%);
 
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
 }
-.netflix_desc{
+
+.netflix_desc {
     margin-right: 2vw;
     width: 50%;
     height: 100%;
@@ -471,7 +458,8 @@ nav{
     align-items: center;
     gap: 5vh;
 }
-.netflix_desc h1{
+
+.netflix_desc h1 {
     margin-top: 5vh;
     color: white;
     font-family: "Inria Serif", serif;
@@ -479,19 +467,23 @@ nav{
     font-size: 2rem;
 
 }
-.netflix_desc p{
+
+.netflix_desc p {
     margin-top: 5vh;
     text-align: center;
     font-family: "Average Sans", serif;
     color: white;
 }
-.stars_review{
+
+/* align stars together beside each other using flexbox */
+.stars_review {
     width: 20vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.stars_review h5{
+
+.stars_review h5 {
     margin-top: 0.7vh;
     margin-right: 0.5vw;
     color: white;
@@ -499,30 +491,37 @@ nav{
     font-size: 1.2rem;
     font-weight: 400;
 }
-.star{
+
+.star {
     width: 1.5rem;
 }
 
-.disney_movies{
+/* disney movie styling part, added box shadow for film container 
+divs and css styled in a way to make it scrollable in mobile view*/
+.disney_movies {
     position: relative;
     height: auto;
     width: 100vw;
     padding-bottom: 13vh;
 }
-.disney_movies img{
+
+.disney_movies img {
     height: 14vh;
 }
-.disney_title{
+
+.disney_title {
     margin-top: 0;
     padding: 10vh 0 0 10vw;
 }
-.disney_shows{
+
+.disney_shows {
     height: auto;
     width: 100vw;
     display: flex;
     justify-content: center;
 }
-.disney_wrapper{
+
+.disney_wrapper {
     padding: 5vh 3vw;
     margin-top: 2vh;
     width: 80vw;
@@ -534,70 +533,88 @@ nav{
     border-radius: 1.5rem;
     box-shadow: rgba(130, 130, 174, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
 }
-.film_item{
+
+.film_item {
     position: relative;
     width: 12vw;
     height: 28vh;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
+
 .film_item:nth-child(1) {
     background-image: url('resources/Home_Page/Disney_films/film1.jpg');
     background-size: cover;
 }
+
 .film_item:nth-child(2) {
     background-image: url('resources/Home_Page/Disney_films/film2.jpg');
     background-size: cover;
 }
+
 .film_item:nth-child(3) {
     background-image: url('resources/Home_Page/Disney_films/film3.jpg');
     background-size: cover;
 }
+
 .film_item:nth-child(4) {
     background-image: url('resources/Home_Page/Disney_films/film4.jpg');
     background-size: cover;
 }
+
 .film_item:nth-child(5) {
     background-image: url('resources/Home_Page/Disney_films/film5.jpg');
     background-size: cover;
 }
+
 .film_item:nth-child(6) {
     background-image: url('resources/Home_Page/Disney_films/film6.jpg');
     background-size: cover;
 }
+
 .film_item:nth-child(7) {
     background-image: url('resources/Home_Page/Disney_films/film7.jpg');
     background-size: cover;
 }
 
+.film_item:hover {
+    transform: scale(1.1);
+}
 
-.latest_interesting_news{
+/* Latest stories and corner of the world part */
+.latest_interesting_news {
     background: linear-gradient(to bottom, #000000 0%, #212636 70%, #292E43 100%);
     padding-bottom: 10vh;
     overflow: hidden;
 }
-.horizontal_wrapper{
+
+.horizontal_wrapper {
     position: relative;
     height: auto;
     width: 100vw;
 }
-.scroll_title{
+
+.scroll_title {
     width: 80vw;
     display: flex;
     padding: 10vh 0 0 10vw;
     display: flex;
     align-items: center;
 }
-.scroll_title h1{
+
+.scroll_title h1 {
     color: white;
     font-family: "Julius Sans One", serif;
     font-weight: 400;
 }
-.scroll_container{
+
+.scroll_container {
     width: 100vw;
     display: flex;
     justify-content: center;
 }
-.item_container{
+
+.item_container {
     width: 80vw;
     display: flex;
     justify-content: flex-start;
@@ -606,7 +623,8 @@ nav{
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
-.scroll_item{
+
+.scroll_item {
     position: relative;
     height: 33vh;
     min-width: 26vw;
@@ -615,7 +633,8 @@ nav{
     justify-content: center;
     align-items: flex-end;
 }
-.scroll_item p{
+
+.scroll_item p {
     width: 80%;
     text-decoration: none;
     color: white;
@@ -623,102 +642,137 @@ nav{
     z-index: 1;
     font-family: "Average Sans", serif;
     font-size: 1.3rem;
-    margin-bottom: 2vh; 
+    margin-bottom: 2vh;
 }
-.scroll_item span{
+
+/* added background gradient to see text better, similar to the netflix part */
+.scroll_item span {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1) , rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0));
 }
-.item_container a{
+
+.item_container a {
     text-decoration: none;
 }
+
 .item_container a:nth-child(1) .scroll_item {
     background-image: url('resources/Home_Page/Latest_stories/story1.jpg');
     background-size: cover;
 }
+
 .item_container a:nth-child(2) .scroll_item {
     background-image: url('resources/Home_Page/Latest_stories/story2.jpg');
     background-size: cover;
 }
+
 .item_container a:nth-child(3) .scroll_item {
     background-image: url('resources/Home_Page/Latest_stories/story3.jpg');
     background-size: cover;
 }
+
 .item_container a:nth-child(4) .scroll_item {
     background-image: url('resources/Home_Page/Latest_stories/story4.jpg');
     background-size: cover;
 }
+
 .item_container a:nth-child(5) .scroll_item {
     background-image: url('resources/Home_Page/Latest_stories/story5.jpg');
     background-size: cover;
 }
+
 .item_container a:nth-child(6) .scroll_item {
     background-image: url('resources/Home_Page/Latest_stories/story6.jpg');
     background-size: cover;
 }
-.scroll_buttons{
+
+/* bumping up animation when hovering */
+.scroll_item:hover {
+    animation: bumpup 0.5s ease-in-out;
+}
+
+@keyframes bumpup {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.scroll_buttons {
     margin-left: 55vw;
 }
-.world_corners{
+
+.world_corners {
     margin-left: 44vw;
 }
-.sbutton{
+
+.sbutton {
     all: unset;
     width: 1.1vw;
     height: 4vh;
 }
-#scroll_left{
+
+#scroll_left {
     background: url(resources/Iconify/arrow_left.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-#scroll_right{
+
+#scroll_right {
     margin-left: 1vw;
     background: url(resources/Iconify/arrow_right.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#scroll_left_corners{
+#scroll_left_corners {
     background: url(resources/Iconify/arrow_left.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-#scroll_right_corners{
+
+#scroll_right_corners {
     margin-left: 1vw;
     background: url(resources/Iconify/arrow_right.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.sbutton:focus{
-    outline: revert;
-}
+
 .item_container a:nth-child(1) .corners_item {
     background-image: url(resources/Home_Page/Corners_of_the_world/corner1.jpg);
 }
+
 .item_container a:nth-child(2) .corners_item {
     background-image: url(resources/Home_Page/Corners_of_the_world/corner2.jpg);
 }
+
 .item_container a:nth-child(3) .corners_item {
     background-image: url(resources/Home_Page/Corners_of_the_world/corner3.jpg);
 }
+
 .item_container a:nth-child(4) .corners_item {
     background-image: url(resources/Home_Page/Corners_of_the_world/corner4.jpg);
 }
+
 .item_container a:nth-child(5) .corners_item {
     background-image: url(resources/Home_Page/Corners_of_the_world/corner5.jpg);
 }
+
 .item_container a:nth-child(6) .corners_item {
     background-image: url(resources/Home_Page/Corners_of_the_world/corner6.jpg);
 }
 
 
 
-
+/* subscription page, broken into 3 tiers of subcription */
 .subscription {
     background: url(resources/Home_Page/underwater_background.jpeg);
     height: 100vh;
@@ -731,25 +785,28 @@ nav{
     flex-direction: column;
     gap: 4vh;
 }
-.subscriptions_title{
+
+.subscriptions_title {
     transform: translateY(-3vh);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.subscriptions_title h1{
+
+.subscriptions_title h1 {
     font-family: "Kumbh Sans", sans-serif;
     font-weight: 800;
     font-size: 2.8rem;
 }
-.subscriptions_title h5{
+
+.subscriptions_title h5 {
     font-family: "Kumbh Sans", sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
 
 }
 
-.subscription_plans_container{
+.subscription_plans_container {
     position: relative;
     height: auto;
     width: 90vw;
@@ -757,7 +814,8 @@ nav{
     justify-content: center;
     gap: 5vw;
 }
-.subscription_plan{
+
+.subscription_plan {
     position: relative;
     background-color: #292A37;
     height: 70vh;
@@ -767,7 +825,8 @@ nav{
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-.price{
+
+.price {
     position: absolute;
     width: 100%;
     height: 12%;
@@ -777,32 +836,38 @@ nav{
     justify-content: center;
     align-items: center;
 }
-.subscription_plan h1{
+
+.subscription_plan h1 {
     color: white;
     font-family: "Kumbh Sans", sans-serif;
     margin-top: 5vh;
 }
-.price p{
+
+.price p {
     font-family: 'average sans';
     font-size: 1.5rem;
     color: white;
 }
-.plan_features{
+
+.plan_features {
     position: absolute;
     display: flex;
     flex-direction: column;
     top: 28vh;
     gap: 2vh;
 }
-.plan_features p{
+
+.plan_features p {
     font-family: 'average sans';
     font-size: 1.1rem;
     color: #F8F8FF;
 }
+
 .plan1_features p:nth-child(n+3):nth-child(-n+6) {
     color: rgba(248, 248, 255, 0.4);
 }
-.subscription_icon_container{
+
+.subscription_icon_container {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -810,29 +875,42 @@ nav{
     top: 28vh;
     gap: 2vh;
 }
-.subscription_icon_container img{
+
+.subscription_icon_container img {
     width: 1.28rem;
 }
-.cancel_opacity{
+
+.cancel_opacity {
     opacity: 0.4;
 }
-.start_exploring{
+
+/*added outer box shadow by default, when exploring div is active (being clicked),
+inner box shadow is added to give a pressed effect */
+.start_exploring {
     position: absolute;
     bottom: 3.5vh;
     padding: 1.5rem 2.2rem;
     background-color: #454651;
     border-radius: 2rem;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.start_exploring p{
+
+.start_exploring:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.start_exploring p {
     color: white;
     font-family: 'average sans';
     font-size: 1.2rem;
 }
+
 .plan2_features p:nth-child(n+5):nth-child(-n+6) {
     color: rgba(248, 248, 255, 0.4);
 }
-.plan2_exploring{
+
+.plan2_exploring {
     background-color: #195BFF;
 }
 
@@ -840,7 +918,7 @@ nav{
 
 
 /* FOOTER PART */
-footer{
+footer {
     position: relative;
     width: 100vw;
     display: flex;
@@ -850,30 +928,35 @@ footer{
     padding-left: 4vw;
     padding-bottom: 10vh;
 }
-.connected_follow{
+
+.connected_follow {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 5vh;
     width: 20vw;
 }
-.stay_connected{
+
+.stay_connected {
     position: relative;
     width: 19vw;
     height: 30vh;
 }
-.stay_connected h1{
+
+.stay_connected h1 {
     font-family: "Lisu Bosa", serif;
     font-weight: 1000;
     color: white;
     margin-bottom: 5vh;
 }
-.stay_connected p{
+
+.stay_connected p {
     font-family: "leelawadee", serif;
     font-weight: 400;
     color: white;
 }
-.your_email{
+
+.your_email {
     margin-top: 3vh;
     width: 16vw;
     height: 5vh;
@@ -882,7 +965,9 @@ footer{
     border-bottom: #D9D9D9 2px solid;
     justify-content: space-between;
 }
-.your_email input{
+
+/* forms is used for email part to make it typable */
+.your_email input {
     color: rgba(255, 255, 255, 0.5);
     margin-left: 0.5vw;
     font-family: "leelawadee", serif;
@@ -895,76 +980,107 @@ footer{
     -moz-box-shadow: none;
     background-color: transparent;
 }
-.your_email input:focus{
+
+/* remove default styling of input box to make it fit theme */
+.your_email input:focus {
     outline: none;
     border: none;
 }
-.your_email img{
+
+/* styling and arrangement of footer elements */
+.your_email img {
     height: 2.8vh;
 }
-.follow_us{
+
+.your_email img:hover {
+    cursor: pointer;
+}
+
+.follow_us {
     width: 30vw;
     height: 20vh;
 }
-.follow_image_container{
+
+.follow_image_container {
     margin-top: 1vh;
     display: flex;
     gap: 0.5vw;
 
 }
-.follow_us p{
+
+.follow_us p {
     font-family: "leelawadee", serif;
     font-weight: 400;
     color: white;
 }
-.our_sites{
+
+.our_sites {
     width: 18vw;
     display: flex;
     justify-content: center;
 }
-.site_links{
+
+.site_links {
     display: flex;
     width: fit-content;
     flex-direction: column;
     gap: 1.2vh;
 }
-.site_links a{
+
+.site_links a {
     width: 12vw;
     text-decoration: none;
     color: white;
     font-family: "leelawadee", serif;
 }
-.our_sites h1{
+
+.site_links a:hover {
+    text-decoration: underline;
+}
+
+.our_sites h1 {
     font-family: "Lisu Bosa", serif;
     font-weight: 1000;
     color: white;
 }
-.contact_us{
+
+.contact_us {
     width: 30vw;
 }
-.contact_us h1{
+
+.contact_us h1 {
     font-family: "Lisu Bosa", serif;
     font-weight: 1000;
     color: white;
 }
-.contact_details{
+
+.contact_details {
     width: 100%;
     height: 20vh;
     margin-top: 7vh;
 }
-.footer_detail{
+
+.footer_detail {
     width: 100%;
     display: flex;
     align-items: center;
     margin-bottom: 1vh;
 }
-.footer_detail p{
+
+.footer_detail p {
     margin-left: 1vw;
     color: white;
     font-family: "leelawadee", serif;
     font-weight: 400;
 }
-.copyright{
+
+.footer_detail p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* copyright part is added to the bottom of the padding of the footer element with position absolute */ 
+.copyright {
     margin: 0;
     position: absolute;
     width: 100vw;
@@ -976,11 +1092,13 @@ footer{
     align-items: center;
     border-top: 1px rgba(217, 217, 217, 0.7) solid;
 }
-.copyright img{
+
+#copyright_logo {
     margin-left: 10vw;
-    height: 60%;
+    height: 6vh;
 }
-.copyright p{
+
+.copyright p {
     width: fit-content;
     margin-left: 5vw;
     color: rgba(255, 255, 255, 0.6);
@@ -988,31 +1106,37 @@ footer{
 
 
 @media (max-width: 1000px) {
+    /* change eagle content to cropped picture for mobile view */
     #eagle1 {
-        content: url('resources/Home_Page/eagle\ 1\ cut.jpg'); 
-        width: 100vw;
+        content: url('resources/Home_Page/eagle\ 1\ cut.jpg');
+        width: 100%;
         height: auto;
         margin-top: 33vh;
     }
-    .hide_container{
+
+    /* styling of other css elements for front page */
+    .hide_container {
         max-width: 0;
         transition: 0.5s ease-in-out;
     }
-    
-    .right_align_search{
+
+    .right_align_search {
         top: 2vh;
         right: 10vw;
         position: absolute;
-        background-color: #CFBE43;
     }
-    .search_container{
+
+    .search_container {
         width: 25vw;
         transition: 0.5s ease-in-out;
     }
-    #cancel_icon, #search_icon{
+
+    #cancel_icon,
+    #search_icon {
         width: 6vw;
     }
-    nav{
+
+    nav {
         display: flex;
         width: 100vw;
         flex-direction: column;
@@ -1020,15 +1144,16 @@ footer{
         border-bottom: 2px solid white;
         padding-bottom: 7vh;
     }
-    .natgeologospan{
+
+    .natgeologospan {
         width: 100vw;
     }
 
     #natgeologo {
         position: relative;
         width: 30vw;
-        margin-top: 2vh;
-        left: 2vw;
+        margin-top: 3vh;
+        left: 4vw;
         margin-left: 2vw;
     }
 
@@ -1048,36 +1173,27 @@ footer{
         justify-content: center;
         align-items: center;
     }
-    
+
 
     #home_search {
         top: 4vh;
         right: 10vw;
     }
 
-    #select_box{
+    #select_box {
         width: 28vw;
         height: 5vh;
         margin-right: 4vw;
         font-size: 15px;
     }
-    #audio_button{
+
+    #audio_button {
         margin: 0.5rem;
     }
-    #audio_button img{
+
+    #audio_button img {
         width: 6vw;
     }
-    /* .nav_explore::after {
-        content: '';
-        position: absolute;
-        top: -1.1vh;
-        right: -0.7vw;
-        width: 26vw;
-        height: 4.5vh;
-        border: 1px white solid;
-        border-radius: 1.5vh;
-    } */
-
 
 
     .show_details {
@@ -1115,7 +1231,8 @@ footer{
     .time_block {
         margin-bottom: 5vh;
     }
-    .time_block p{
+
+    .time_block p {
         width: 25.5vw;
         line-height: 7.7vh;
         font-size: 2.6rem;
@@ -1138,45 +1255,51 @@ footer{
         font-size: 1.2rem;
     }
 
-
+    /* cloud is not ment to be movable in mobile view, could cause problems if user clicks on it etc */
     .cloud {
         pointer-events: none;
         top: 100vh;
         position: absolute;
     }
 
-    .trending_shows_title{
+    .trending_shows_title {
         padding: 6vh 0 0 0;
     }
-    .trending_shows_title h2{
+
+    .trending_shows_title h2 {
         font-size: 1.5rem;
         padding-left: 10vw;
     }
-    .trending_shows_title img{
+
+    .trending_shows_title img {
         margin-left: 2vw;
         width: 30vw;
         height: 5vh;
     }
-    
-    .animals_trailer{
-        height: 20vh; 
+
+    .animals_trailer {
+        height: 20vh;
     }
-    .netflix_shows{
+
+    .netflix_shows {
         padding-top: 2vh;
     }
-    .netflix_video{
+
+    .netflix_video {
         width: 90vw;
     }
-    .netflix_overlay{
-        background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.15) 0%,   
-            rgba(0, 0, 0, 0.6) 40%, 
-            rgba(0, 0, 0, 0.8) 60%, 
-            rgba(0, 0, 0, 1) 100%
-          );
+
+    /* redefine the netflix overlay, previously on desktop view, the dark side was on the right,
+    but since there is no horizontal space on phone, the dark side is on the bottom */
+    .netflix_overlay {
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0.15) 0%,
+                rgba(0, 0, 0, 0.6) 40%,
+                rgba(0, 0, 0, 0.8) 60%,
+                rgba(0, 0, 0, 1) 100%);
     }
-    .netflix_desc{
+
+    .netflix_desc {
         background-color: black;
         position: absolute;
         width: 82vw;
@@ -1189,29 +1312,38 @@ footer{
         border-radius: 1rem;
 
     }
-    .netflix_desc h1{
+
+    .netflix_desc h1 {
         font-size: 1.8rem;
         margin: 0;
     }
-    .netflix_desc p{
+
+    .netflix_desc p {
         margin: 0;
     }
-    
 
-    .disney_movies{
+
+    .disney_movies {
         margin-top: 30vh;
     }
-    .disney_movies h1{
+
+    .disney_movies h1 {
         font-size: 1rem;
     }
-    .disney_movies .trending_shows_title h2{
+
+    .disney_movies .trending_shows_title h2 {
         font-size: 1.2rem;
     }
-    .disney_movies .trending_shows_title img{
+
+    .disney_movies .trending_shows_title img {
         height: 9vh;
         margin-bottom: 1vh;
     }
-    .disney_wrapper{
+
+    /* as disney wrapper was made to be scrollable in mobile view,
+    overlay x is used, to keep the size of each film from being too small on mobile
+    min width is defined for each film to keep its size */
+    .disney_wrapper {
         height: auto;
         padding: 2vh 5vw;
         overflow-x: auto;
@@ -1222,72 +1354,93 @@ footer{
         margin-top: 0;
         scroll-behavior: smooth;
     }
-    .film_item{
+
+    .film_item {
         min-width: 40vw;
         height: 26vh;
     }
 
-    .item_container{
+    .item_container {
         gap: 10vw;
     }
-    .scroll_item{
+
+    .scroll_item {
         height: 30vh;
         min-width: 75vw;
         border-radius: 1em;
     }
-    .scroll_item span{
+
+    .scroll_item span {
         border-radius: 1em;
     }
-    .scroll_container{
+
+    .scroll_container {
         overflow-x: hidden;
     }
-    .sbutton{
+
+    .sbutton {
         width: 3vw;
         height: 3vh;
     }
-    .scroll_buttons{
+
+    .scroll_buttons {
         margin-left: 16vw;
     }
-    .scroll_title h1{
+
+    .scroll_title h1 {
         width: 50vw;
         font-size: 1.8rem;
     }
-    .disney_movies{
+
+    .disney_movies {
         padding-bottom: 5vh;
     }
-    .scroll_title{
+
+    .scroll_title {
         padding: 5vh 0 0 10vw;
     }
-    .latest_interesting_news{
+
+    .latest_interesting_news {
         padding-bottom: 6vh;
     }
-    .horizontal_wrapper, .scroll_container{
+
+    .horizontal_wrapper,
+    .scroll_container {
         padding-left: 1.5vw;
     }
-    .latest_interesting_news{
+
+    .latest_interesting_news {
         overflow-x: hidden;
     }
 
 
-    .subscription{
+    .subscription {
         gap: 0;
     }
-    .subscriptions_title h1{
+
+    .subscriptions_title h1 {
         font-size: 2.2rem;
     }
-    .subscription_plans_container{
+
+    .subscription_plans_container {
         flex-direction: column;
         height: 80vh;
     }
-    .subscription_plan{
+
+    .subscription_plan {
         width: 100%;
         max-height: 25vh;
         border-radius: 2rem 0;
     }
-    .start_exploring{
+
+    .start_exploring {
         display: none;
     }
-    .price{
+
+    /*price for subscription page is styled differently in mobile view,
+    border corners are added for only 2 opposite sides (cuz it look good),
+    and the tier of subscription is rotated to be vertical instead of horizontal */
+    .price {
         height: 100%;
         width: 20%;
         right: 0;
@@ -1295,27 +1448,33 @@ footer{
         border-radius: 2rem 0;
         cursor: pointer;
     }
-    .price p{
+
+    .price p {
         font-size: 1.2rem;
         text-align: center;
     }
-    .plan_features{
+
+    .plan_features {
         top: 1vh;
         margin-left: 3vw;
     }
-    .plan_features p{
+
+    .plan_features p {
         font-size: 1rem;
     }
-    .subscription_icon_container{
+
+    .subscription_icon_container {
         top: 1.1vh;
         left: 16vw;
         gap: 1rem;
     }
-    .subscription_plan h1{
+
+    .subscription_plan h1 {
         position: absolute;
         left: 0;
         top: 5.5vh;
         transform: rotate(-90deg);
+        font-size: 1.5rem;
     }
 
 
@@ -1324,61 +1483,73 @@ footer{
 
 
     /* FOOTER PART */
-    footer{
+
+    /* mostly just rearranging of elements in footer, except for the logo below */
+    footer {
         position: relative;
-        padding-top: 5vh;
         flex-direction: column;
-        padding-bottom: 52vh;
         overflow: hidden;
+        margin: 0;
+        padding: 5vh 0 52vh 0;
     }
-    .connected_only{
-        margin-left: 3vw;
+
+    .connected_only {
+        margin-left: 5vw;
         width: 40vw;
         font-size: 0.8rem;
     }
-    .your_email{
+
+    .your_email {
         width: 35vw;
-        
+
     }
-    .your_email img{
+
+    .your_email img {
         transform: translateX(-8vw);
     }
 
-    .contact_us{
+    .contact_us {
         position: absolute;
         width: 40vw;
         word-break: break-word;
         top: 5vh;
-        right: 8vw;
+        right: 6vw;
         font-size: 0.8rem;
     }
-    .our_sites{
+
+    .our_sites {
         position: absolute;
         top: 32vh;
         width: 70vw;
-        margin-left: 13vw;
+        margin-left: 15vw;
         font-size: 0.9rem;
     }
-    .our_sites h1{
-        margin-left: 24vw;
+
+    .our_sites h1 {
+        margin-left: 25vw;
     }
-    .site_links{
+
+    .site_links {
         width: 80vw;
         height: 17vh;
         display: flex;
         flex-wrap: wrap;
     }
-    .site_links a{
+
+    .site_links a {
         width: 40vw;
     }
-    .contact_details{
+
+    .contact_details {
         margin-top: 0;
     }
-    .contact_us img{
+
+    .contact_us img {
         margin-right: 2vw;
         transform: translateY(-0.5vh);
     }
-    .follow_us{
+
+    .follow_us {
         position: absolute;
         top: 52vh;
         left: 21vw;
@@ -1389,22 +1560,32 @@ footer{
         align-items: center;
         font-size: 0.8rem;
     }
-    .follow_image_container{
+
+    .follow_image_container {
         gap: 5vw;
     }
-    .follow_image_container img{
+
+    .follow_image_container img {
         width: 8vw;
     }
-    .follow_us p{
+
+    .follow_us {
+        margin-left: 2vw;
+    }
+
+    .follow_us p {
         text-align: center;
         font-size: 1.5rem;
         width: 30vw;
         margin-bottom: 1vh;
     }
-    .copyright img{
+
+    /* removed nat geo logo from footer in mobile view as it just takes up space and
+    there is not much point of it on phone, may also block other elements if not removed */
+    #copyright_logo {
         display: none;
     }
-    
+
 
 
 }
@@ -1415,25 +1596,28 @@ footer{
 
 
 
-@font-face{
+@font-face {
     font-family: 'geomedium';
     src: url('fonts/geographwebmedium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-@font-face{
+
+@font-face {
     font-family: 'geobold';
     src: url('fonts/geographeditwebbold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-@font-face{
+
+@font-face {
     font-family: 'georegular';
     src: url('fonts/geographwebregular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-@font-face{
+
+@font-face {
     font-family: 'leelawadee';
     src: url('fonts/leelawad.ttf') format('truetype');
     font-weight: normal;

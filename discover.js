@@ -1,4 +1,5 @@
-//search bar
+//search bar interactivity, removes hide classlist when search icon is clicked,
+// and adds it back when cancel icon is clicked 
 const openIcon = document.querySelector('#search_icon');
 const closeIcon = document.querySelector('#cancel_icon');
 const container = document.querySelector('.search_container');

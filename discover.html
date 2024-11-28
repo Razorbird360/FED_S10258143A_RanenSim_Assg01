@@ -28,13 +28,17 @@
     </div>
     
     <header class="animals_page">
-        <video src="https://razorbird360.github.io/FED_S10267339B_RanenSim_Assg01/resources/Animals_Page/Animals_bg_video.mp4"></video>
+        <div class="videobg_overlay"></div>
+        <video autoplay muted loop id="videobg">
+            <source src="https://razorbird360.github.io/FED_S10267339B_RanenSim_Assg01/resources/Animals_Page/Bg_animals.mp4">
+        </video>
+        <span id="title_underline"></span>
         <nav class="navbar">
             <a href="" id="current_nav">Animals</a>
-            <a href="">Environment</a>
-            <a href="">History & Culture</a>
-            <a href="">Science</a>
-            <a href="">Travel</a>
+            <div class="navbar_tag"><a href="">Environment</a></div>
+            <div class="navbar_tag"><a href="">History & Culture</a></div>
+            <div class="navbar_tag"><a href="">Science</a></div>
+            <div class="navbar_tag"><a href="">Travel</a></div>
         </nav>
         <div class="page_title">
             <h1>Animals</h1>

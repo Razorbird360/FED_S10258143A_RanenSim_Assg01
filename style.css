@@ -1115,21 +1115,22 @@ footer {
     }
 
     /* styling of other css elements for front page */
+    .search_container {
+        width: 35vw;
+        transition: 0.5s ease-in-out;
+    }
     .hide_container {
+        width: 0;
         max-width: 0;
         transition: 0.5s ease-in-out;
     }
 
     .right_align_search {
         top: 2vh;
-        right: 10vw;
+        right: 8vw;
         position: absolute;
     }
 
-    .search_container {
-        width: 25vw;
-        transition: 0.5s ease-in-out;
-    }
 
     #cancel_icon,
     #search_icon {

@@ -5,6 +5,7 @@
 body{
     width: 100vw;
     height: auto;
+    overflow-x: hidden;
 }
 .logo_header{
     position: relative;
@@ -25,9 +26,9 @@ body{
     position: absolute;
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 4.2vh;
-    margin-left: 46vw;
-    
+    margin-top: 3vh;
+    right: 10vw;
+    z-index: 1;
 }
 .search_bar{
     background-color: white;
@@ -79,15 +80,34 @@ body{
 }
 
 .animals_page{
-    background-color: rgb(71, 145, 211);
-    height: 30vh;
+    position: relative;
+    height: 35vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    border-top: #D9D9D9 2px solid;
 }
-.animals_page{
+
+.animals_page video{
+    position: absolute;
     width: 100vw;
+    height: 35vh;
+    object-fit: fill;
+    z-index: -1;
+}
+.videobg_overlay{
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.7) 90%);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .navbar{
     width: 100vw;
@@ -98,54 +118,144 @@ body{
     height: 8vh;
     color: white;
     font-family: "georegular", serif;
-    background-color: chartreuse;
     gap: 3vw;
+    margin-top: 3vh;
 }
 #current_nav{
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 100rem;
-    font-family: 'georegular', serif;
     color: white;
     margin-left: 5vw;
 }
-.navbar a{
+.navbar_tag{
+    position: relative;
+    width: auto;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar_tag a, #current_nav{
     text-decoration: none;
     padding: 1rem 1.5rem;
+    font-family: 'georegular', serif;
+    color: white;
+    font-weight: 300;
 }
-.navbar a::before{
+.navbar_tag a::after{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    height: 2rem;
-    width: 3rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: 0;
+    height: inherit;
+    padding: 1.5rem 0;
+    background-color: rgba(214, 214, 214, 0.5);
     border-radius: 100rem;
-    transform: scale(0);
-    transition: 0.5s ease-in-out;
+    transition: width 0.3s ease-in-out;
 }
+.navbar_tag a:hover::after{
+    width: 100%;
+}
+
 .page_title{
+    width: 100vw;
     position: relative;
-    background-color: blanchedalmond;
 }
 .page_title h1{
     margin-left: 10vw;
     font-family: "geobold", serif;
     font-size: 2.7rem;
+    color: white;
 }
 .page_title h1::after{
     content: '';
     position: absolute;
     top: 2vh;
-    left: 0;
-    height: 10vh;
-    width: 0.5vw;
-    background-color: chartreuse;
+    left: 9vw;
+    height: 8vh;
+    width: 0.4vw;
+    background-color: #FFCC00;
+}
+
+#title_underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 85vw;
+    background-color: #D9D9D9;
 }
 
 
+@media (max-width: 1000px) {
+
+    .search_container{
+        width: 35vw;
+    }
+    .hide_container{
+        width: 0;
+    }
+    .right_align_search{
+        top: 1vh;
+        right: 7vw;
+        margin: 0;
+    }
+    #cancel_icon,
+    #search_icon {
+        width: 6vw;
+    }
+    .logo_header{
+        justify-content: flex-start;
+    }
+    #natgeologo{
+        margin-left: 7vw;
+        width: 30vw;
+        height: auto;
+    }
+    .navbar{
+        gap: 8vw;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    /* formats navbar elements to be in 1 line to fit hover effect */
+    .navbar_tag a, #current_nav{
+        padding: 1rem 1rem;
+        white-space: nowrap;
+    }
+
+    /* scale hover element in mobile, and adds spacing to last element */
+    .navbar_tag{
+        height: 5vh;
+    }
+    .navbar_tag:last-child{
+        margin-right: 7vw;
+    }
+    .page_title h1{
+        font-size: 2.5rem;
+    }
+    .page_title h1::after{
+        left: 8vw;
+        width: 1vw;
+        height: 6vh;
+    }
+    .animals_page{
+        height: 25vh;
+    }
+    .animals_page video{
+        height: 25vh;
+    }
+    
 
 
+
+
+
+
+
+
+
+}
 
 
 

@@ -45,7 +45,7 @@ body{
 
 .backlink{
     position: absolute;
-    top: 2.9vh;
+    top: 2.5vh;
     left: 3vw;
     display: flex;
     align-items: center;
@@ -240,6 +240,7 @@ body{
 
 /* minus the view height of logo header, animals page and padding to fill the remaining space */
 .head_article{
+    position: relative;
     width: 100vw;
     padding-top: 5vh;
     height: calc(100vh - 8vh - 35vh - 5vh);
@@ -249,6 +250,7 @@ body{
 .ha_sidetext, .ha_image{
     width: 50%;
     height: 100%;
+    position: relative;
 }
 .ha_image{
     display: flex;
@@ -261,6 +263,7 @@ body{
     margin-right: 10%;
 }
 .ha_sidetext {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -315,6 +318,64 @@ body{
 .read_more:hover::before{
     height: 180%;
 }
+.ha_sidetext a{
+    text-decoration: none;
+}
+.ha_timestamp{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(2.5vw);
+    z-index: 1;
+}
+.ha_timestamp img{
+    height: 100%;
+}
+.ha_timestamp p{
+    font-family: "georegular", serif;
+    font-size: 0.9rem;
+    color: white;
+    margin-left: 0.2vw;
+}
+.recent_articles{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+.recent_articles_title{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2vh;
+}
+.recent_articles_title h3{
+    color: white;
+    font-family: "georegular", serif;
+    font-weight: 600;
+    margin-left: 7.5vw;
+    font-size: 1.6rem;
+}
+.recent_articles_title h3::after{
+    content: '';
+    position: absolute;
+    height: 0.5vh;
+    width: 19vw;
+    top: 10.5vh;
+    left: 7.5vw;
+    background-color: rgba(255, 204, 0, 0.6);
+}
+.article_container{
+    width: 100vw;
+    height: 30vh;
+}
+
+
+
 
 
 
@@ -381,9 +442,70 @@ body{
     .animals_page video{
         height: 25vh;
     }
-    
+    .head_article{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+        padding: 0;
+    }
+    .ha_sidetext, .ha_image{
+        width: 100vw;
+    }
+    .ha_timestamp{
+        right: auto;
+        left: 5vw;
+        height: 2.5vh;
+        top: 34.3vh;
+    }
+    .ha_sidetext{
+        height: auto;
+        justify-content: space-between;
+    }
+    .ha_sidetext h2, .ha_sidetext h5{
+        margin: 0;
+        padding: 0;
+        width: 85vw;
+    }
+    .ha_sidetext h2{
+        margin-top: 3vh;
+        font-size: 1.4rem;
+    }
+    .ha_sidetext h5{
+        font-size: 1rem;
+        margin-top: 30vh;
+    }
+    .read_more{
+        margin: 3vh 0 3vh 0;
+    }
+    .ha_image{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        top: 0;
+    }
+    .ha_image img{
+        margin: 11vh 0 0 0;
+        width: 85%;
+        height: 26vh;
+    }
+    .read_more{
+        z-index: 1;
+    }
 
 
+    .recent_articles_title{
+        height: 5vh;
+    }
+    .recent_articles_title h3{
+        font-size: 1.7rem;
+    }
+    .recent_articles_title h3::after{
+        top: 5.5vh;
+        width: 72vw;
+    }
 
 
 

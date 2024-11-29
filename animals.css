@@ -236,6 +236,8 @@ body{
     width: 100vw;
     height: auto;
     background-color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 /* minus the view height of logo header, animals page and padding to fill the remaining space */
@@ -357,21 +359,57 @@ body{
     color: white;
     font-family: "georegular", serif;
     font-weight: 600;
-    margin-left: 7.5vw;
+    margin-left: 7vw;
     font-size: 1.6rem;
 }
 .recent_articles_title h3::after{
     content: '';
     position: absolute;
-    height: 0.5vh;
+    height: 0.3vh;
     width: 19vw;
     top: 10.5vh;
-    left: 7.5vw;
+    left: 7vw;
     background-color: rgba(255, 204, 0, 0.6);
 }
 .article_container{
+    position: relative;
     width: 100vw;
-    height: 30vh;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 8vh;
+}
+.article_item{
+    width: 20vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.article_item img{
+    width: 100%;
+}
+.article_item h4{
+    height: 10vh;
+    font-family: "geomedium", serif;
+    font-size: 1.3rem;
+    font-weight: 100;
+    letter-spacing: 0.2px;
+    color: white;
+    margin-top: 0.8vh;
+}
+.article_item p{
+    position: relative;
+    margin-top: 2vh;
+    font-family: "leelawadee", serif;
+    font-size: 0.9rem;
+    font-weight: 100;
+    color: white;
+}
+
+.load_more_container{
+    display: none;
 }
 
 
@@ -506,6 +544,82 @@ body{
         top: 5.5vh;
         width: 72vw;
     }
+
+
+    .article_container{
+        margin: 0;
+        flex-direction: column;
+        gap: 2.5vh;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2vh;
+    }
+    .article_item{
+        display: flex;
+        margin: 0;
+        width: 95vw;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 3vw;
+    }
+    .article_item img{
+        margin: 0;
+        height: 14vh;
+        width: 45vw;
+    }
+    .article_item h4, .article_item p{
+        margin: 0;
+    }
+    .article_item p{
+        display: none;
+    }
+    .article_item h4{
+        width: 48%;
+        margin-left: 3vw;
+        font-size: 1.2rem;
+        height: auto;
+    }
+
+
+    .load_more_container{
+        margin: 5vh 0;
+        display: flex;
+        width: 100vw;
+        height: auto;
+        justify-content: center;
+        transition: margin 0.3s ease-in-out;
+    }
+    .load_more_button{
+        display: flex;
+        width: 40vw;
+        height: 6vh;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFCC00;
+        gap: 2vw;
+        border-radius: 0.5rem;
+        z-index: 1;
+    }
+    .load_more_button p{
+        font-family: "geooblique", serif;
+        font-size: 1.3rem;
+        color: black;
+    }
+    .ac_1{
+        z-index: 1;
+        background-color: black;
+    }
+    .ac_2{
+        position: absolute;
+        z-index: 0;
+        transition: transform 0.3s ease-in-out;
+    }
+    #load_arrow{
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+
 
 
 

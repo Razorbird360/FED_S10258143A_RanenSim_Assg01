@@ -35,3 +35,53 @@ function changevideo() {
 }
 changevideo();
 window.addEventListener("resize", changevideo);
+
+
+
+//moves article container down when load more button is clicked, and back up when clicked again
+//function is called once first to move the container up first
+//article container 2 hides behind article container 1
+//rotates the load more button arrow when clicked
+//function triggered by load more button onclick
+//removes transition when content is hidden
+//changes paragraph text when load more button is clicked
+let article_down = true;
+function change_article_height() {
+    const article_container = document.querySelector('.ac_2');
+    const load_more_container = document.querySelector('.load_more_container');
+    const load_arrow = document.getElementById('load_arrow');
+    const load_text = document.getElementById('load_text');
+
+    if (article_down) {
+        article_down = false;
+        article_container.style.transform = `translateY(-66vh)`;
+        load_more_container.style.marginTop = `5vh`;
+        load_arrow.style.transform = `rotate(0)`;
+        article_container.style.transition = `none`;
+        load_text.textContent = "Load More";
+    }
+    else {
+        article_down = true;
+        article_container.style.transform = `translateY(0)`;
+        load_more_container.style.marginTop = `70vh`;
+        load_arrow.style.transform = `rotate(-180deg)`;
+        article_container.style.transition = `transform 0.5s ease-in-out`;
+        load_text.textContent = "Hide";
+    }
+
+}
+change_article_height();
+
+//hide article container 2 when window is in mobile view, and does the opposite in desktop view
+function change_article_details() {
+    if (window.innerWidth < 1000) {
+        article_down = true;
+        change_article_height();
+    } else {
+        article_down = false;
+        change_article_height();
+    }
+}
+
+window.addEventListener('resize', change_article_details);
+window.addEventListener('load', change_article_details);

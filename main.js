@@ -229,3 +229,63 @@ subscribe_button.addEventListener("click", ()=> {
     });
 });
 
+
+//login page falls down and fades in when login button is clicked
+const login_trigger = document.getElementById('login_trigger');
+const exit_login = document.getElementById('login_button');
+
+const login_page = document.querySelector('.login_page');
+const login_container = document.querySelector('.login_container');
+
+login_trigger.addEventListener('click', ()=> {
+    login_page.style.display = `flex`;
+    setTimeout(()=> {
+    login_page.style.opacity = 100;
+    login_container.style.transform = `translateY(0)`;
+    }, 500);
+});
+
+exit_login.addEventListener('click', ()=> {
+    login_page.style.opacity = 0;
+    login_container.style.transform = `translateY(-100vh)`;
+    setTimeout(()=> {
+        login_page.style.display = `none`;
+    }, 500);
+});
+
+
+// let login_up = false;
+// login_trigger.addEventListener('click', ()=> {
+//     if (login_up) {
+//         login_up = false;
+//         login_page.style.display = `flex`;
+//         setTimeout(()=> {
+//         login_page.style.opacity = 100;
+//         login_container.style.transform = `translateY(0)`;
+//         }, 500);
+//     } else {
+//         login_up = true;
+//         login_page.style.opacity = 0;
+//         login_container.style.transform = `translateY(-100vh)`;
+//         setTimeout(()=> {
+//             login_page.style.display = `none`;
+//         }, 500);
+//     }
+// });
+
+// exit_login.addEventListener('click', ()=> {
+//     if (login_up) {
+//         login_up = false;
+//         login_page.style.opacity = 100;
+//         login_container.style.transform = `translateY(0)`;
+//         login_page.style.display = `flex`;
+//     } else {
+//         login_up = true;
+//         login_page.style.opacity = 0;
+//         login_container.style.transform = `translateY(-100vh)`;
+//         setTimeout(()=> {
+//             login_page.style.display = `none`;
+//         }, 500);
+//     }
+// });
+

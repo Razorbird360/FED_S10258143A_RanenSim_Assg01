@@ -15,6 +15,49 @@
 </head>
 <body>
 
+    <div class="login_page">
+        <div class="login_container">
+            <div class="login_icon_container">
+                <a href="https://www.nationalgeographic.com/"><img src="resources/Iconify/google.svg" alt=""></a>
+                <a href="https://www.facebook.com/natgeo/"><img src="resources/Iconify/facebook.svg" alt=""></a>
+                <a href="https://www.linkedin.com/company/national-geographic/"><img src="resources/Iconify/linkedin.svg" alt=""></a>
+                <a href="https://x.com/natgeo"><img src="resources/Iconify/twitter.svg" alt=""></a>
+                <a href="https://tv.apple.com/us/show/nat-geo-wild/umc.cmc.6zo98ziemujmjz15m6ipdqiuz"><img src="resources/Iconify/apple.svg" alt=""></a>
+            </div>
+
+            <div class="or_placeholder">
+                <span></span>
+                <p>Or</p>
+                <span></span>
+            </div>
+
+            <div class="ltext_container ltext_email">
+                <p>Email</p>
+                <input type="text" placeholder="Enter your email" required>
+            </div>
+            <div class="ltext_container ltext_email">
+                <p>Password</p>
+                <input type="text" placeholder="Enter your password" required>
+            </div>
+
+            <div class="remember_password">
+                <input type="checkbox" id="rememberpass">
+                <label for="rememberpass">Remember Me</label>
+            </div>
+
+            
+            <div id="login_button">
+                <p>Login</p>
+            </div>
+            
+
+            <div class="accountpass">
+                <a href="https://www.nationalgeographic.com/"><p>Sign up</p></a>
+                <a href="https://www.natgeotv.com/ca/users/forgotten-password"><p>Reset Password</p></a>
+            </div>
+        </div>
+    </div>
+
     <nav>
         <span class="natgeologospan"><a href="index.html"><img src="resources/Icons/Natgeologo.png" alt="National Geographic logo" id="natgeologo"></a></span>
         <div class="right_align_search">
@@ -26,10 +69,10 @@
                 <img src="resources/Iconify/Search.svg" id="search_icon" class="navbar_icon" alt="search icon">
             </div>
         </div>
-        
+    
         <div class="navbar_right">
             <ul class="navbuttons">
-                <li><span class="yellow_overlay">Login</span></li>
+                <li><span class="yellow_overlay" id="login_trigger">Login</span></li>
                 <li class="nav_sub"><span id="subscribe_pagelink" class="yellow_overlay">Subscribe</span></li>
             </ul>
     
@@ -46,6 +89,9 @@
             </div>
         </div>
     </nav>
+
+
+
 
     <header class="shows_header">
         <img src="resources/Home_Page/eagle1.jpg" alt="image of eagle show" id="eagle1">

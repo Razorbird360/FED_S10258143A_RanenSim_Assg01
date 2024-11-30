@@ -723,6 +723,7 @@ divs and css styled in a way to make it scrollable in mobile view*/
     all: unset;
     width: 1.1vw;
     height: 4vh;
+    cursor: pointer;
 }
 
 #scroll_left {

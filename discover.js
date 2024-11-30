@@ -54,7 +54,7 @@ function change_article_height() {
 
     if (article_down) {
         article_down = false;
-        article_container.style.transform = `translateY(-66vh)`;
+        article_container.style.transform = `translateY(-67vh)`;
         load_more_container.style.marginTop = `5vh`;
         load_arrow.style.transform = `rotate(0)`;
         article_container.style.transition = `none`;

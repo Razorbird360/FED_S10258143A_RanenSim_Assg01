@@ -16,20 +16,23 @@ html::-webkit-scrollbar-thumb:hover {
     border-radius: 100em;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     width: 100vw;
     height: auto;
     overflow-x: hidden;
 }
-.animals_header{
+
+.animals_header {
     position: relative;
     width: 100vw;
 }
-.logo_header{
+
+.logo_header {
     position: relative;
     width: 100vw;
     height: 8vh;
@@ -39,18 +42,20 @@ body{
     justify-content: center;
     border-bottom: #D9D9D9;
 }
-#natgeologo{
+
+#natgeologo {
     height: 5.5vh;
 }
 
-.backlink{
+.backlink {
     position: absolute;
     top: 2.5vh;
     left: 3vw;
     display: flex;
     align-items: center;
 }
-.backlink a{
+
+.backlink a {
     text-decoration: none;
     color: white;
     font-family: "georegular", serif;
@@ -58,15 +63,17 @@ body{
     display: flex;
     align-items: center;
 }
-.backlink img{
+
+.backlink img {
     height: 3vh;
     margin-right: 0.2vw;
 }
-.backlink a:hover{
+
+.backlink a:hover {
     text-decoration: underline;
 }
 
-.right_align_search{
+.right_align_search {
     position: absolute;
     display: flex;
     justify-content: flex-end;
@@ -74,7 +81,8 @@ body{
     right: 10vw;
     z-index: 1;
 }
-.search_bar{
+
+.search_bar {
     background-color: white;
     position: absolute;
     width: fit-content;
@@ -84,21 +92,25 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-.hide_bar_bg{
+
+.hide_bar_bg {
     background-color: transparent;
 }
-.navbar_icon{
+
+.navbar_icon {
     width: 2vw;
     transition: width 0.5s ease-in-out;
     cursor: pointer;
 }
-#cancel_icon{
+
+#cancel_icon {
     min-width: 2vw;
     width: 2vw;
 }
-.search_container{
+
+.search_container {
     width: 15vw;
     display: flex;
     align-items: center;
@@ -106,24 +118,27 @@ body{
     overflow: hidden;
     transition: 0.5s ease-in-out;
 }
-#search_input{
+
+#search_input {
     width: 12vw;
     border: none;
     outline: none;
     color: black;
     font-family: "Average Sans", serif;
 }
-#search_input::placeholder{
+
+#search_input::placeholder {
     color: rgb(47, 201, 17);
 }
-.hide_container{
+
+.hide_container {
     width: 0;
     overflow: hidden;
     pointer-events: none;
     color: black;
 }
 
-.animals_page{
+.animals_page {
     position: relative;
     height: 35vh;
     width: 100vw;
@@ -134,14 +149,15 @@ body{
     border-top: #D9D9D9 2px solid;
 }
 
-.animals_page video{
+.animals_page video {
     position: absolute;
     width: 100vw;
     height: 35vh;
     object-fit: fill;
     z-index: -1;
 }
-.videobg_overlay{
+
+.videobg_overlay {
     background: linear-gradient(to bottom,
             rgba(0, 0, 0, 0.7) 0%,
             rgba(0, 0, 0, 0.4) 50%,
@@ -153,7 +169,8 @@ body{
     width: 100%;
     height: 100%;
 }
-.navbar{
+
+.navbar {
     width: 100vw;
     position: relative;
     display: flex;
@@ -165,13 +182,15 @@ body{
     gap: 3vw;
     margin-top: 3vh;
 }
-#current_nav{
+
+#current_nav {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 100rem;
     color: white;
     margin-left: 5vw;
 }
-.navbar_tag{
+
+.navbar_tag {
     position: relative;
     width: auto;
     height: 6vh;
@@ -179,14 +198,17 @@ body{
     align-items: center;
     justify-content: center;
 }
-.navbar_tag a, #current_nav{
+
+.navbar_tag a,
+#current_nav {
     text-decoration: none;
     padding: 1rem 1.5rem;
     font-family: 'georegular', serif;
     color: white;
     font-weight: 300;
 }
-.navbar_tag a::after{
+
+.navbar_tag a::after {
     content: '';
     position: absolute;
     top: 0;
@@ -198,21 +220,24 @@ body{
     border-radius: 100rem;
     transition: width 0.3s ease-in-out;
 }
-.navbar_tag a:hover::after{
+
+.navbar_tag a:hover::after {
     width: 100%;
 }
 
-.page_title{
+.page_title {
     width: 100vw;
     position: relative;
 }
-.page_title h1{
+
+.page_title h1 {
     margin-left: 10vw;
     font-family: "geobold", serif;
     font-size: 2.7rem;
     color: white;
 }
-.page_title h1::after{
+
+.page_title h1::after {
     content: '';
     position: absolute;
     top: 2vh;
@@ -222,7 +247,7 @@ body{
     background-color: #FFCC00;
 }
 
-#title_underline{
+#title_underline {
     position: absolute;
     bottom: 0;
     height: 2px;
@@ -231,7 +256,7 @@ body{
 }
 
 
-.news_articles{
+.news_articles {
     position: relative;
     width: 100vw;
     height: auto;
@@ -241,7 +266,7 @@ body{
 }
 
 /* minus the view height of logo header, animals page and padding to fill the remaining space */
-.head_article{
+.head_article {
     position: relative;
     width: 100vw;
     padding-top: 5vh;
@@ -249,21 +274,26 @@ body{
     display: flex;
 
 }
-.ha_sidetext, .ha_image{
+
+.ha_sidetext,
+.ha_image {
     width: 50%;
     height: 100%;
     position: relative;
 }
-.ha_image{
+
+.ha_image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.ha_image img{
+
+.ha_image img {
     width: 80%;
     height: 100%;
     margin-right: 10%;
 }
+
 .ha_sidetext {
     position: relative;
     display: flex;
@@ -271,7 +301,8 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.ha_sidetext h2{
+
+.ha_sidetext h2 {
     margin-top: 10vh;
     width: 70%;
     font-family: "geomedium", serif;
@@ -279,7 +310,8 @@ body{
     font-size: 2rem;
     color: white;
 }
-.ha_sidetext h5{
+
+.ha_sidetext h5 {
     margin-top: 6vh;
     width: 70%;
     font-family: "leelawadee", serif;
@@ -287,7 +319,8 @@ body{
     font-size: 1.1rem;
     color: white;
 }
-.read_more{
+
+.read_more {
     position: relative;
     margin-top: 1vh;
     margin-bottom: 2vh;
@@ -298,14 +331,16 @@ body{
     z-index: 0;
     overflow: hidden;
 }
-.read_more p{
+
+.read_more p {
     color: black;
     font-family: "geooblique", serif;
     font-weight: 400;
     font-size: 1.25rem;
     z-index: 1;
 }
-.read_more::before{
+
+.read_more::before {
     content: '';
     position: absolute;
     top: 0;
@@ -317,13 +352,16 @@ body{
     transition: height 0.4s ease-in-out;
     z-index: -1;
 }
-.read_more:hover::before{
+
+.read_more:hover::before {
     height: 180%;
 }
-.ha_sidetext a{
+
+.ha_sidetext a {
     text-decoration: none;
 }
-.ha_timestamp{
+
+.ha_timestamp {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -333,21 +371,25 @@ body{
     transform: translateX(2.5vw);
     z-index: 1;
 }
-.ha_timestamp img{
+
+.ha_timestamp img {
     height: 100%;
 }
-.ha_timestamp p{
+
+.ha_timestamp p {
     font-family: "georegular", serif;
     font-size: 0.9rem;
     color: white;
     margin-left: 0.2vw;
 }
-.recent_articles{
+
+.recent_articles {
     position: relative;
     width: 100vw;
     height: auto;
 }
-.recent_articles_title{
+
+.recent_articles_title {
     position: relative;
     width: 100%;
     height: 10vh;
@@ -355,14 +397,16 @@ body{
     align-items: flex-end;
     margin-bottom: 2vh;
 }
-.recent_articles_title h3{
+
+.recent_articles_title h3 {
     color: white;
     font-family: "georegular", serif;
     font-weight: 600;
     margin-left: 7vw;
     font-size: 1.6rem;
 }
-.recent_articles_title h3::after{
+
+.recent_articles_title h3::after {
     content: '';
     position: absolute;
     height: 0.3vh;
@@ -371,7 +415,8 @@ body{
     left: 7vw;
     background-color: rgba(255, 204, 0, 0.6);
 }
-.article_container{
+
+.article_container {
     position: relative;
     width: 100vw;
     height: auto;
@@ -381,16 +426,19 @@ body{
     gap: 2vw;
     margin-bottom: 8vh;
 }
-.article_item{
+
+.article_item {
     width: 20vw;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-.article_item img{
+
+.article_item img {
     width: 100%;
 }
-.article_item h4{
+
+.article_item h4 {
     height: 10vh;
     font-family: "geomedium", serif;
     font-size: 1.3rem;
@@ -399,7 +447,8 @@ body{
     color: white;
     margin-top: 0.8vh;
 }
-.article_item p{
+
+.article_item p {
     position: relative;
     margin-top: 2vh;
     font-family: "leelawadee", serif;
@@ -407,26 +456,29 @@ body{
     font-weight: 100;
     color: white;
 }
-.load_more_container{
+
+.load_more_container {
     display: none;
 }
 
 
 
-.trivia{
+.trivia {
     position: relative;
     width: 100vw;
     background: linear-gradient(to bottom, #09161A 5%, #473030 100%);
     padding-bottom: 4vh;
 }
-.trivia_title_container{
+
+.trivia_title_container {
     width: 100vw;
     height: auto;
     display: flex;
     justify-content: flex-start;
     background-color: black;
 }
-.trivia_title{
+
+.trivia_title {
     width: 50vw;
     background-color: #09161A;
     border-radius: 0 100rem 0 0;
@@ -434,7 +486,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.trivia_title h1{
+
+.trivia_title h1 {
     margin-right: 7vw;
     font-family: "Lexend Mega", serif;
     letter-spacing: -0.2vw;
@@ -442,7 +495,8 @@ body{
     font-size: 2rem;
     color: white;
 }
-.trivia_container{
+
+.trivia_container {
     position: relative;
     width: 100vw;
     height: auto;
@@ -450,26 +504,30 @@ body{
     justify-content: center;
     align-items: center;
 }
-.activity_container{
+
+.activity_container {
     position: relative;
     padding: 5vh 0;
     width: 100vw;
     height: 45vh;
     display: flex;
 }
-.image_container{
+
+.image_container {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.image_container img{
+
+.image_container img {
     width: 80%;
     height: 100%;
     border-radius: 1rem;
 }
-.content_container{
+
+.content_container {
     position: relative;
     width: 50%;
     height: 100%;
@@ -477,20 +535,25 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
 }
-.content_container h5, .content_container p{
+
+.content_container h5,
+.content_container p {
     font-family: "leelawadee", serif;
     color: white;
 }
-.content_container h5{
+
+.content_container h5 {
     font-size: 1.8rem;
     font-weight: 200;
 }
-.content_container p{
+
+.content_container p {
     font-size: 1.2rem;
     font-weight: 100;
     width: 70%;
 }
-.activities_button{
+
+.activities_button {
     position: relative;
     width: fit-content;
     padding: 1.25rem 3rem;
@@ -501,13 +564,15 @@ body{
     overflow: hidden;
     cursor: pointer;
 }
+
 .activities_button p {
     font-size: 1.3rem;
     font-family: "geooblique", serif;
     width: fit-content;
     color: black;
 }
-.activities_button::before{
+
+.activities_button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -519,17 +584,23 @@ body{
     transition: height 0.4s ease-in-out;
     z-index: -1;
 }
-.activities_button:hover::before{
+
+.activities_button:hover::before {
     height: 180%;
 }
-.trivia_activity_2{
+
+.trivia_activity_2 {
     flex-direction: row-reverse;
     align-items: center;
 }
-.trivia_content_2 h5, .trivia_content_2 p, .trivia_content_2 .activities_button{
+
+.trivia_content_2 h5,
+.trivia_content_2 p,
+.trivia_content_2 .activities_button {
     margin-left: 5vw;
 }
-.trivia_content_2 .activities_button p{
+
+.trivia_content_2 .activities_button p {
     margin: 0;
 }
 
@@ -699,7 +770,7 @@ footer {
     cursor: pointer;
 }
 
-/* copyright part is added to the bottom of the padding of the footer element with position absolute */ 
+/* copyright part is added to the bottom of the padding of the footer element with position absolute */
 .copyright {
     margin: 0;
     position: absolute;
@@ -733,69 +804,84 @@ footer {
 
 @media (max-width: 1000px) {
 
-    .backlink{
+    .backlink {
         display: none;
     }
-    .search_container{
+
+    .search_container {
         width: 35vw;
     }
-    .hide_container{
+
+    .hide_container {
         width: 0;
     }
-    .right_align_search{
+
+    .right_align_search {
         top: 1vh;
         right: 7vw;
         margin: 0;
     }
+
     #cancel_icon,
     #search_icon {
         width: 6vw;
     }
-    .logo_header{
+
+    .logo_header {
         justify-content: flex-start;
     }
-    #natgeologo{
+
+    #natgeologo {
         margin-left: 7vw;
         width: 30vw;
         height: auto;
     }
-    .navbar{
+
+    .navbar {
         gap: 8vw;
         overflow-x: auto;
         scrollbar-width: none;
     }
 
     /* formats navbar elements to be in 1 line to fit hover effect */
-    .navbar_tag a, #current_nav{
+    .navbar_tag a,
+    #current_nav {
         padding: 1rem 1rem;
         white-space: nowrap;
     }
 
     /* scale hover element in mobile, and adds spacing to last element */
-    .navbar_tag{
+    .navbar_tag {
         height: 5vh;
     }
-    .navbar_tag:last-child{
+
+    .navbar_tag:last-child {
         margin-right: 7vw;
     }
-    .page_title h1{
+
+    .page_title h1 {
         font-size: 2.5rem;
     }
-    .page_title h1::after{
+
+    .page_title h1::after {
         left: 6.5vw;
         width: 1vw;
         height: 6vh;
     }
-    .animals_page{
+
+    .animals_page {
         height: 25vh;
     }
-    .animals_page video{
+
+    .animals_page video {
         height: 25vh;
     }
-    .news_articles{
+
+    .news_articles {
         background: linear-gradient(to bottom, #222222 0%, #2f2f2f 15%, #171717 30%, #000000 50%);
     }
-    .head_article{
+
+    .head_article {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -803,65 +889,79 @@ footer {
         height: auto;
         padding: 0;
     }
-    .ha_sidetext, .ha_image{
+
+    .ha_sidetext,
+    .ha_image {
         width: 100vw;
     }
-    .ha_timestamp{
+
+    .ha_timestamp {
         right: auto;
         left: 5vw;
         height: 2.5vh;
         top: 34.3vh;
     }
-    .ha_sidetext{
+
+    .ha_sidetext {
         height: auto;
         justify-content: space-between;
     }
-    .ha_sidetext h2, .ha_sidetext h5{
+
+    .ha_sidetext h2,
+    .ha_sidetext h5 {
         margin: 0;
         padding: 0;
         width: 85vw;
     }
-    .ha_sidetext h2{
+
+    .ha_sidetext h2 {
         margin-top: 3vh;
         font-size: 1.4rem;
     }
-    .ha_sidetext h5{
+
+    .ha_sidetext h5 {
         font-size: 1rem;
         margin-top: 30vh;
     }
-    .read_more{
+
+    .read_more {
         margin: 3vh 0 3vh 0;
     }
-    .ha_image{
+
+    .ha_image {
         position: absolute;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         top: 0;
     }
-    .ha_image img{
+
+    .ha_image img {
         margin: 11vh 0 0 0;
         width: 85%;
         height: 26vh;
     }
-    .read_more{
+
+    .read_more {
         z-index: 1;
     }
 
 
-    .recent_articles_title{
+    .recent_articles_title {
         height: 5vh;
     }
-    .recent_articles_title h3{
+
+    .recent_articles_title h3 {
         font-size: 1.7rem;
     }
-    .recent_articles_title h3::after{
+
+    .recent_articles_title h3::after {
         top: 5.5vh;
         width: 72vw;
     }
 
 
-    .article_container{
+    .article_container {
         margin: 0;
         flex-direction: column;
         gap: 2.5vh;
@@ -869,7 +969,8 @@ footer {
         justify-content: center;
         margin-bottom: 2vh;
     }
-    .article_item{
+
+    .article_item {
         display: flex;
         margin: 0;
         width: 95vw;
@@ -877,18 +978,23 @@ footer {
         align-items: center;
         margin-left: 3vw;
     }
-    .article_item img{
+
+    .article_item img {
         margin: 0;
         height: 14vh;
         width: 45vw;
     }
-    .article_item h4, .article_item p{
+
+    .article_item h4,
+    .article_item p {
         margin: 0;
     }
-    .article_item p{
+
+    .article_item p {
         display: none;
     }
-    .article_item h4{
+
+    .article_item h4 {
         width: 48%;
         margin-left: 3vw;
         font-size: 1.2rem;
@@ -896,7 +1002,7 @@ footer {
     }
 
 
-    .load_more_container{
+    .load_more_container {
         margin: 5vh 0;
         display: flex;
         width: 100vw;
@@ -904,7 +1010,8 @@ footer {
         justify-content: center;
         transition: margin 0.3s ease-in-out;
     }
-    .load_more_button{
+
+    .load_more_button {
         display: flex;
         width: 40vw;
         height: 6vh;
@@ -915,50 +1022,59 @@ footer {
         border-radius: 0.5rem;
         z-index: 1;
     }
-    .load_more_button p{
+
+    .load_more_button p {
         font-family: "geooblique", serif;
         font-size: 1.3rem;
         color: black;
     }
-    .ac_1{
+
+    .ac_1 {
         z-index: 1;
         background-color: black;
     }
-    .ac_2{
+
+    .ac_2 {
         position: absolute;
         z-index: 0;
         transition: transform 0.3s ease-in-out;
     }
-    #load_arrow{
+
+    #load_arrow {
         transition: transform 0.3s ease-in-out;
     }
 
 
-    .trivia{
+    .trivia {
         padding-bottom: 1vh;
     }
-    .trivia_title{
+
+    .trivia_title {
         width: 90vw;
     }
-    .trivia_title h1{
+
+    .trivia_title h1 {
         margin-right: 2vh;
         font-size: 1.4rem;
     }
 
-    .activity_container{
+    .activity_container {
         flex-direction: column;
         height: auto;
         align-items: center;
         width: 100vw;
         padding: 3vh 0;
     }
-    .image_container{
+
+    .image_container {
         width: 100%;
     }
-    .image_container img{
+
+    .image_container img {
         width: 90%;
     }
-    .content_container{
+
+    .content_container {
         margin-top: 2vh;
         display: flex;
         width: 90w;
@@ -968,17 +1084,21 @@ footer {
         justify-content: space-between;
         align-items: center;
     }
-    .content_container h5{
+
+    .content_container h5 {
         width: 55%;
         font-size: 1.6rem;
     }
-    .content_container p{
+
+    .content_container p {
         display: none;
     }
-    .content_container{
+
+    .content_container {
         width: 100vw;
     }
-    .activities_button{
+
+    .activities_button {
         width: 35vw;
         height: 7vh;
         padding: 0;
@@ -986,12 +1106,14 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    .activities_button p{
+
+    .activities_button p {
         display: block;
         font-size: 1.4rem;
         color: black;
     }
-    .trivia_content_2 h5{
+
+    .trivia_content_2 h5 {
         padding: 0;
         margin: 0;
         font-size: 1.6rem;
@@ -1000,7 +1122,7 @@ footer {
 
 
 
-        /* FOOTER PART */
+    /* FOOTER PART */
 
     /* mostly just rearranging of elements in footer, except for the logo below */
     footer {
@@ -1111,30 +1233,34 @@ footer {
 
 
 
-@font-face{
+@font-face {
     font-family: 'geomedium';
     src: url('fonts/geographwebmedium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-@font-face{
+
+@font-face {
     font-family: 'geobold';
     src: url('fonts/geographeditwebbold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-@font-face{
+
+@font-face {
     font-family: 'georegular';
     src: url('fonts/geographwebregular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-@font-face{
+
+@font-face {
     font-family: 'leelawadee';
     src: url('fonts/leelawad.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'geooblique';
     src: url('fonts/Geo\ Oblique.ttf') format('truetype');

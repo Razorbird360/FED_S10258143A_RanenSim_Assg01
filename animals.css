@@ -235,7 +235,7 @@ body{
     position: relative;
     width: 100vw;
     height: auto;
-    background-color: black;
+    background: linear-gradient(to bottom, #222222 0%, #2f2f2f 20%, #171717 40%, #000000 100%);
     display: flex;
     flex-direction: column;
 }
@@ -479,6 +479,9 @@ body{
     }
     .animals_page video{
         height: 25vh;
+    }
+    .news_articles{
+        background: linear-gradient(to bottom, #222222 0%, #2f2f2f 15%, #171717 30%, #000000 50%);
     }
     .head_article{
         display: flex;

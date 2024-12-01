@@ -240,8 +240,8 @@ const login_container = document.querySelector('.login_container');
 login_trigger.addEventListener('click', ()=> {
     login_page.style.display = `flex`;
     setTimeout(()=> {
-    login_page.style.opacity = 100;
-    login_container.style.transform = `translateY(0)`;
+        login_page.style.opacity = 1;
+        login_container.style.transform = `translateY(0)`;
     }, 500);
 });
 
@@ -251,6 +251,7 @@ exit_login.addEventListener('click', ()=> {
     setTimeout(()=> {
         login_page.style.display = `none`;
     }, 500);
+
 });
 
 

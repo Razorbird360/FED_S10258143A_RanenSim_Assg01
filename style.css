@@ -18,6 +18,10 @@ html::-webkit-scrollbar-thumb:hover {
 
 /* reset default margins and paddings */
 
+html{
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -29,6 +33,7 @@ body {
     overflow-x: hidden;
     animation: textappear 0.3s;
 }
+
 
 @keyframes textappear {
     0% {

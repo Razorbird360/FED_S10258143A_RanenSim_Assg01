@@ -120,22 +120,22 @@ sound/mute icon: https://www.figma.com/design/TC42uLDU1Uc9HyERBTAXAi/5000%2B-Ico
 Black mesh gradient: (figma mesh gradient plugin):
 
 Netflix and Disney+ logo:
-https://www.google.com/search?as_st=y&as_q=disney%2B+logo+no+background&as_epq=&as_oq=&as_eq=&imgar=&imgcolor=&imgtype=&cr=&as_sitesearch=&as_filetype=png&tbs=&udm=2#vhid=moOGUpxEu_E6ZM&vssid=mosaic
-https://www.google.com/search?sca_esv=a88b1582b82b9395&rlz=1C1JJTC_en-GBSG1107SG1107&sxsrf=ADLYWIIXeCsjFNM0Fl-Lhr5PIDfS0V9Crw:1731784629112&q=netflix+logo+transparent&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J603JUkR9Y5suk8yuy50qOYMMWTNCTu57lKPsZpPcfqPO_IpBTFq5Iu5fjJcS9zeIjPFJUv87eZfN29UFdVUPMDQu7RK9R_bUPLOf1fjQfA8iavGDDNI4XAiPb7CBH_tYixgN7oUspZLXXXsRkqTIf5aqMzAsa5BiGd_cq9iXccaPMpaPw&sa=X&sqi=2&ved=2ahUKEwi_9JS9yOGJAxWL4TgGHX1_AkUQtKgLegQIHBAB&biw=1920&bih=989&dpr=1#vhid=wQSI9KvyzHEvcM&vssid=mosaic
+https://www.google.com/search?as_st=y&as_q=disney%2B+logo+no+background
+https://www.google.com/search?sca_esv=a88b1582b82b9395&rlz=1C1JJTC_en-GBSG1107SG1107&sxsrf=ADLYWIIXeCsjFNM0Fl-Lhr5PIDfS0V9Crw:1731784629112&q=netflix+logo+transparent
 
 Disney+ films are (picked from official nat geo website):
 https://www.nationalgeographic.com/
 
 
 Animals page pictures:
-https://www.nationalgeographic.com/animals/article/famous-grizzly-399-yellowstone-bear-killed-wyoming-vehicle
-https://www.nationalgeographic.com/animals/article/rattlesnakes-venom-conservation
-https://www.nationalgeographic.com/animals/article/wasps-alcohol-yeast-health
-https://www.nationalgeographic.com/animals/article/plastic-whales-echolocation-deep-sea
-https://www.nationalgeographic.com/animals/article/florida-manatees-warmer-water-archaeology
-https://www.nationalgeographic.com/animals/article/martial-eagles-lion-cubs-prey-eat-hunt
-https://www.nationalgeographic.com/animals/article/invasive-joro-spiders-spreading-boston-philadelphia
-https://mrswatsonshomepage.weebly.com/personality-test.html
+1. https://www.nationalgeographic.com/animals/article/famous-grizzly-399-yellowstone-bear-killed-wyoming-vehicle
+2. https://www.nationalgeographic.com/animals/article/rattlesnakes-venom-conservation
+3. https://www.nationalgeographic.com/animals/article/wasps-alcohol-yeast-health
+4. https://www.nationalgeographic.com/animals/article/plastic-whales-echolocation-deep-sea
+5. https://www.nationalgeographic.com/animals/article/florida-manatees-warmer-water-archaeology
+6. https://www.nationalgeographic.com/animals/article/martial-eagles-lion-cubs-prey-eat-hunt
+7. https://www.nationalgeographic.com/animals/article/invasive-joro-spiders-spreading-boston-philadelphia
+8. httlps://mrswatsonshomepage.weebly.com/personality-test.html
 
 Latest stories/corners of the world images and text:
 https://www.beautifulnews.com/

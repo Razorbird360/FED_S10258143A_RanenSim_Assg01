@@ -1,13 +1,12 @@
 # FED_S10267339B_RanenSim_Assg01
 
-Github Pages: [Website is live here](https://razorbird360.github.io/FED_S10267339B_RanenSim_Assg01/ "Visit Page")
+GitHub Pages: [Website link](https://razorbird360.github.io/FED_S10267339B_RanenSim_Assg01/ "Visit Page")  
 
-View on: 
-Laptop: 1920 x 1200
-Mobile: 932 x 430 (Iphone 14 Pro Max)
+View on:  
+- Laptop: 1920 x 1200  
+- Mobile: 932 x 430 (iPhone 14 Pro Max)  
 
-
-Figma: [Wireframes are live here](https://www.figma.com/design/qcH4nYIKQH9FYtyNdPMC4d/FED_S10258143A_RanenSim_Assg01?node-id=0-1&t=PsPrFChmqPHOgmoF-1 "Visit Figma Wireframes")
+Figma: [Figma link](https://www.figma.com/design/qcH4nYIKQH9FYtyNdPMC4d/FED_S10258143A_RanenSim_Assg01?node-id=0-1&t=PsPrFChmqPHOgmoF-1 "Visit Figma Wireframes")  
 
 
 ---
@@ -112,14 +111,12 @@ Icons not used from figma plugin:
 sound/mute icon: https://www.figma.com/design/TC42uLDU1Uc9HyERBTAXAi/5000%2B-Icon-Set-(Community)?node-id=1-3&node-type=frame&t=O6Q5KNVjaPly8kYk-0
 Black mesh gradient: (figma mesh gradient plugin):
 
-
-
 Netflix and Disney+ logo:
 https://www.google.com/search?as_st=y&as_q=disney%2B+logo+no+background&as_epq=&as_oq=&as_eq=&imgar=&imgcolor=&imgtype=&cr=&as_sitesearch=&as_filetype=png&tbs=&udm=2#vhid=moOGUpxEu_E6ZM&vssid=mosaic
 https://www.google.com/search?sca_esv=a88b1582b82b9395&rlz=1C1JJTC_en-GBSG1107SG1107&sxsrf=ADLYWIIXeCsjFNM0Fl-Lhr5PIDfS0V9Crw:1731784629112&q=netflix+logo+transparent&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J603JUkR9Y5suk8yuy50qOYMMWTNCTu57lKPsZpPcfqPO_IpBTFq5Iu5fjJcS9zeIjPFJUv87eZfN29UFdVUPMDQu7RK9R_bUPLOf1fjQfA8iavGDDNI4XAiPb7CBH_tYixgN7oUspZLXXXsRkqTIf5aqMzAsa5BiGd_cq9iXccaPMpaPw&sa=X&sqi=2&ved=2ahUKEwi_9JS9yOGJAxWL4TgGHX1_AkUQtKgLegQIHBAB&biw=1920&bih=989&dpr=1#vhid=wQSI9KvyzHEvcM&vssid=mosaic
 
-Disney+ films are (picked from official nat geo website:
- https://www.nationalgeographic.com/
+Disney+ films are (picked from official nat geo website):
+https://www.nationalgeographic.com/
 
 
 Animals page pictures:
@@ -137,7 +134,6 @@ https://www.beautifulnews.com/
 
 Box shadow templates
 https://getcssscan.com/css-box-shadow-examples
-
 
 ### External resources:
 google fonts:

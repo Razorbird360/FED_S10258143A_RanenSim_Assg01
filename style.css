@@ -1094,14 +1094,13 @@ inner box shadow is added to give a pressed effect */
     justify-content: center;
     align-items: center;
     transition: 0.5s ease-in-out;
-}
 
-#login_button p {
     letter-spacing: 1px;
     font-family: "leelawadee", serif;
     font-size: 1.3rem;
     color: white;
     font-weight: 700;
+
 }
 
 .accountpass {

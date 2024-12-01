@@ -231,11 +231,13 @@ subscribe_button.addEventListener("click", ()=> {
 
 
 //login page falls down and fades in when login button is clicked
+//form has to be valid, and login button has prevent default to show dissappearing animation
 const login_trigger = document.getElementById('login_trigger');
 const exit_login = document.getElementById('login_button');
 
 const login_page = document.querySelector('.login_page');
 const login_container = document.querySelector('.login_container');
+const login_form = document.getElementById('login_form');
 
 login_trigger.addEventListener('click', ()=> {
     login_page.style.display = `flex`;
@@ -245,12 +247,17 @@ login_trigger.addEventListener('click', ()=> {
     }, 500);
 });
 
-exit_login.addEventListener('click', ()=> {
-    login_page.style.opacity = 0;
-    login_container.style.transform = `translateY(-100vh)`;
-    setTimeout(()=> {
-        login_page.style.display = `none`;
-    }, 500);
+exit_login.addEventListener('click', (event)=> {
+    event.preventDefault();
+    if(login_form.checkValidity()) {
+        login_page.style.opacity = 0;
+        login_container.style.transform = `translateY(-100vh)`;
+        setTimeout(()=> {
+            login_page.style.display = `none`;
+        }, 500);
+    } else {
+        alert('Please fill in all fields');
+    }
 
 });
 

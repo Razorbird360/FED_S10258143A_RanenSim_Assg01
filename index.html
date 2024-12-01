@@ -31,25 +31,23 @@
                 <span></span>
             </div>
 
-            <div class="ltext_container ltext_email">
-                <p>Email</p>
-                <input type="text" placeholder="Enter your email" required>
-            </div>
-            <div class="ltext_container ltext_email">
-                <p>Password</p>
-                <input type="text" placeholder="Enter your password" required>
-            </div>
-
-            <div class="remember_password">
-                <input type="checkbox" id="rememberpass">
-                <label for="rememberpass">Remember Me</label>
-            </div>
-
-            
-            <div id="login_button">
-                <p>Login</p>
-            </div>
-            
+            <form method="POST" id="login_form">
+                <div class="ltext_container ltext_email">
+                    <p>Email</p>
+                    <input type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="ltext_container ltext_email">
+                    <p>Password</p>
+                    <input type="text" placeholder="Enter your password" required>
+                </div>
+                <div class="remember_password">
+                    <input type="checkbox" id="rememberpass">
+                    <label for="rememberpass">Remember Me</label>
+                </div>
+                
+                <button id="login_button" type="submit">Login</button>
+                
+            </form>
 
             <div class="accountpass">
                 <a href="https://www.nationalgeographic.com/"><p>Sign up</p></a>

@@ -4,7 +4,8 @@ GitHub Pages: [Website link](https://razorbird360.github.io/FED_S10267339B_Ranen
 
 View on:  
 - Laptop: 1920 x 1200  
-- Mobile: 932 x 430 (iPhone 14 Pro Max)  
+- Mobile: 932 x 430 (iPhone 14 Pro Max)
+- Best viewed on Google Chrome  
 
 Figma: [Figma link](https://www.figma.com/design/qcH4nYIKQH9FYtyNdPMC4d/FED_S10258143A_RanenSim_Assg01?node-id=0-1&t=PsPrFChmqPHOgmoF-1 "Visit Figma Wireframes")  
 

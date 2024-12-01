@@ -85,3 +85,40 @@ function change_article_details() {
 
 window.addEventListener('resize', change_article_details);
 window.addEventListener('load', change_article_details);
+
+
+
+
+// save articles
+document.querySelectorAll('.save_button').forEach(button => {
+    button.addEventListener('click', () => {
+        const articles = JSON.parse(localStorage.getItem('articles')) || [];
+
+        const add_article = {
+            id: button.getAttribute('data-id'),
+            title: button.getAttribute('data-title'),
+            desc: button.getAttribute('data-desc'),
+            Image: button.getAttribute('data-image')
+        }
+
+        let exist = false
+        for (let i = 0; i < articles.length; i++) {
+            if (articles[i].id === add_article.id) {
+                exist = true;
+                break;
+            }
+        }
+
+        if (!exist) {
+            articles.push(add_article);
+            localStorage.setItem('articles', JSON.stringify(articles));
+        }
+
+    })
+})    
+    
+    
+    
+    
+    
+    

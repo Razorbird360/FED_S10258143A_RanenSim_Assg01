@@ -23,7 +23,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 body {
     width: 100vw;
-    height: auto;
+    height: 100vh;
     overflow-x: hidden;
 }
 
@@ -424,10 +424,11 @@ body {
     align-items: flex-start;
     justify-content: center;
     gap: 2vw;
-    margin-bottom: 8vh;
+    margin-bottom: 15vh;
 }
 
 .article_item {
+    position: relative;
     width: 20vw;
     height: 100%;
     display: flex;
@@ -460,6 +461,41 @@ body {
 .load_more_container {
     display: none;
 }
+
+/* style button as an absolute positioned element positioned below the article item */
+
+.b_container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(51vh);
+}
+.b_container button{
+    all: unset;
+    width: 12vw;
+    height: 7vh;
+    background-color: #FFCC00;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "leelawadee", serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.b_container button:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color: #5c5c5c;
+}
+
+
+
+
 
 
 
@@ -1121,6 +1157,10 @@ footer {
         padding: 0;
         margin: 0;
         font-size: 1.6rem;
+    }
+
+    .b_container{
+        display: none;
     }
 
 

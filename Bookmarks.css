@@ -1,0 +1,267 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#000000 0%, #000000 15%, #2f2f2f 40%, #171717 80%, #000000 100%);
+}
+
+
+.headerbg {
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-bottom: 2px solid rgba(217, 217, 217, 0.7);
+    z-index: 5;
+}
+
+.logo_header {
+    height: 10vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_header img{
+    height: 7vh;
+}
+
+.backlink{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 12vh;
+}
+.backlink a{
+    width: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.backlink a img{
+    height: 4vh;
+    margin-right: 0.5vw;
+}
+.backlink a p{
+    color: white;
+    font-size: 1.1vw;
+    font-family: 'leelawadee';
+}
+.backlink a p:hover{
+    text-decoration: underline;
+}
+.empty_page{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(23, 23, 23, 0.5);
+    pointer-events: none;
+    z-index: 1;
+    display: none;
+}
+.empty_page h3{
+    font-family: geomedium;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+#saved_articles_container{
+    position: relative;
+    width: 60vw;
+    height: auto;
+    margin-left: 8vw;
+    margin-bottom: 8vh;
+}
+.article_item{
+    display: flex;
+    flex-direction: row;
+    height: 25vh;
+}
+.article_item img{
+    height: 100%;
+    width: auto;
+}
+.article_item_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    font-family: 'leelawadee';
+}
+.article_item_text h3{
+    font-size: 1.5rem;
+    font-family: 'geobold';
+    margin-left: 1vw;
+} 
+.article_item_text p{
+    font-size: 1rem;
+    margin-left: 1vw;
+}
+.article_item{
+    position: relative;
+    margin-bottom: 5vh;
+}
+.remove_icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(8vw);
+    cursor: pointer;
+}
+#removeiconstyle{
+    width: 2vw;
+}
+
+.page_header{
+    margin-top: 3vh;
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+    margin-bottom: 3vh;
+    display: flex;
+    align-items: center;
+}
+.page_header h1{
+    font-family: 'geomedium';
+    color: white;
+    font-weight: 100;
+    font-size: 2.5rem;
+    margin-left: 8vw;
+}
+.page_header span{
+    height: 8vh;
+    width: 4px;
+    background-color: #FFCC00;
+    position: absolute;
+    left: 7vw;
+    top: vh;
+    margin-bottom: 1vh;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .headerbg{
+        width: 90vw;
+    }
+    .logo_header{
+        margin-left: 15vw;
+    }
+
+    .backlink {
+        width: 20vw;
+        margin-left: 3vw;
+        justify-content: flex-start;
+    }
+    .backlink a p{
+        font-size: 1.3rem;
+    }
+    .backlink a{
+        width: 20vw;
+    }
+    .logo_header img{
+        height: 6vh;
+    }
+
+    #saved_articles_container{
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article_item{
+        width: 80vw;
+        height: 40vh;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    .article_item img{
+        width: 100%;
+        height: 30vh;
+    }
+    .article_item p{
+        display: none;
+    }
+    .remove_icon{
+        display: none;
+    }
+
+
+    .page_header h1{
+        margin-left: 12vw;
+    }
+    .page_header span{
+        height: 7vh;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'geomedium';
+    src: url('fonts/geographwebmedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'geobold';
+    src: url('fonts/geographeditwebbold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'georegular';
+    src: url('fonts/geographwebregular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'leelawadee';
+    src: url('fonts/leelawad.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'geooblique';
+    src: url('fonts/Geo\ Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

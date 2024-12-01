@@ -2,8 +2,10 @@
 
 Github Pages: [Website is live here](https://razorbird360.github.io/FED_S10267339B_RanenSim_Assg01/ "Visit Page")
 
+View on: 
 Laptop: 1920 x 1200
 Mobile: 932 x 430 (Iphone 14 Pro Max)
+
 
 Figma: [Wireframes are live here](https://www.figma.com/design/qcH4nYIKQH9FYtyNdPMC4d/FED_S10258143A_RanenSim_Assg01?node-id=0-1&t=PsPrFChmqPHOgmoF-1 "Visit Figma Wireframes")
 

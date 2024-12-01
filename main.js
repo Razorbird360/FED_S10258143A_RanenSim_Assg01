@@ -262,38 +262,3 @@ exit_login.addEventListener('click', (event)=> {
 });
 
 
-// let login_up = false;
-// login_trigger.addEventListener('click', ()=> {
-//     if (login_up) {
-//         login_up = false;
-//         login_page.style.display = `flex`;
-//         setTimeout(()=> {
-//         login_page.style.opacity = 100;
-//         login_container.style.transform = `translateY(0)`;
-//         }, 500);
-//     } else {
-//         login_up = true;
-//         login_page.style.opacity = 0;
-//         login_container.style.transform = `translateY(-100vh)`;
-//         setTimeout(()=> {
-//             login_page.style.display = `none`;
-//         }, 500);
-//     }
-// });
-
-// exit_login.addEventListener('click', ()=> {
-//     if (login_up) {
-//         login_up = false;
-//         login_page.style.opacity = 100;
-//         login_container.style.transform = `translateY(0)`;
-//         login_page.style.display = `flex`;
-//     } else {
-//         login_up = true;
-//         login_page.style.opacity = 0;
-//         login_container.style.transform = `translateY(-100vh)`;
-//         setTimeout(()=> {
-//             login_page.style.display = `none`;
-//         }, 500);
-//     }
-// });
-

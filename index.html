@@ -15,6 +15,7 @@
 </head>
 <body>
 
+    <!-- column for login page is displayed all using flexbox, main container arranges all items by column and its child elements are styled from there -->
     <div class="login_page">
         <div class="login_container">
             <div class="login_icon_container">
@@ -25,6 +26,7 @@
                 <a href="https://tv.apple.com/us/show/nat-geo-wild/umc.cmc.6zo98ziemujmjz15m6ipdqiuz"><img src="resources/Iconify/apple.svg" alt=""></a>
             </div>
 
+            
             <div class="or_placeholder">
                 <span></span>
                 <p>Or</p>
@@ -56,6 +58,9 @@
         </div>
     </div>
 
+
+    <!-- home page navbar is made using list items, only including login and subscribe buttons
+    website navbar is made using a dropdown select box, with the current page being displayed as the default value -->
     <nav>
         <span class="natgeologospan"><a href="index.html"><img src="resources/Icons/Natgeologo.png" alt="National Geographic logo" id="natgeologo"></a></span>
         <div class="right_align_search">
@@ -90,7 +95,7 @@
 
 
 
-
+    <!-- flexbox again is used with column alignment, container is placed in absolute to put it beside the eagle image -->
     <header class="shows_header">
         <img src="resources/Home_Page/eagle1.jpg" alt="image of eagle show" id="eagle1">
         <aside class="show_details">
@@ -130,11 +135,13 @@
         </aside>
     </header>
 
+    <!-- clouds take up half of the vw, and are moved by javascipt to create a parallax effect -->
     <div class="cloud">
         <img src="resources/Home_Page/cloud_flipped.png" alt="" id="left_cloud" class="cloud_item">
         <img src="resources/Home_Page/cloud.png" alt="" id="right_cloud" class="cloud_item">
     </div>
 
+    <!-- this section includes the whole netflix and disney segments, with the netflix video being muted and autoplayed, and the disney films scrollable on mobile only -->
     <section class="trending_shows">
         <div class="netflix_shows">
             <header class="trending_shows_title">
@@ -187,6 +194,8 @@
     
     </section>
 
+
+    <!-- this section has scrollable articles with buttons to scroll left and right, and the corners of the world section is also scrollable -->
     <section class="latest_interesting_news">
         <div class="horizontal_wrapper">
             <header class="scroll_title">
@@ -245,7 +254,7 @@
 
 
 
-        
+        <!-- very similar to the latest stories part, mostly just renaming and restyling of some elements -->
         <div class="horizontal_wrapper">
             <header class="scroll_title wordbreak">
                 <h1>Corners of the world</h1>
@@ -304,6 +313,7 @@
     </section>
 
 
+    <!-- subscription page is split into 3 tiers with different prices and features, with the features being displayed as icons -->
     <section class="subscription" id="subscribe_page">
         <header class="subscriptions_title">
             <h1>Subscription Plans</h1>
@@ -393,6 +403,7 @@
     </section>
 
 
+    <!-- footer bar is also made to fit the theme of the website (dark theme), with responsive buttons and text inputs -->
     <footer>
         <div class="connected_follow">
             <div class="stay_connected">

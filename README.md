@@ -19,7 +19,7 @@ This project is a revamp of the national geographic website, aiming to make it v
 ## Design Process
 
 #### User's goal
-The intended users of this website are nature enthusiasts, mainly anyone interested in national geographic news such as shows, information about nature, and where they can find these films or articles. It also targets people who like to travel, students who are researching on articles
+The intended users of this website are nature enthusiasts, mainly anyone interested in national geographic news such as shows, information about nature, and where they can find these films or articles. It also targets people who like to travel, students who are researching on articles. Users will mostly want to findout information from a reliable source which is interactive and easy to use
 
 #### Site ownders'goal
 National geographic wants to enhance its website to showcase their highest rated and upcoming events or shows. They want to have interactive features to keep their website up to date and fun to interact with, especially for a younger audience that are reading up on articles.
@@ -27,7 +27,7 @@ National geographic wants to enhance its website to showcase their highest rated
 ### User POV
 - Users may want a way to easily find articles, either by scrolling what is recent or by searching up content if they have an idea in mind
 - Users want the website to be interactive and responsive, to feel more immersed and have a more fun time engaging with content on multiple devices
-- Users want to easily find other categories they may be interested in
+- Users want to easily find other categories they may be interested in, as well as saving relavent information.
 
 ---
 
@@ -51,6 +51,11 @@ National geographic wants to enhance its website to showcase their highest rated
 - Read more option for users to scroll down available on mobile
 - Yellow buttons are also interactive
 - Quiz/trivia section to take quizzes for users
+- Add articles to bookmarks page
+
+### Bookmarks Page:
+- Articles saved from discover page appear here, in a condensed format that is easy to read for accessibility
+- Saved articles will stay even after refreshing the page due to use of local storage
 
 ### Features to implement in the future:
 - Fully working shop page
@@ -85,6 +90,8 @@ National geographic wants to enhance its website to showcase their highest rated
 - when scrolling down (about 50vh or more) in the homepage, and then accessing the mobile view, you can zoom out all the way to see the entire page. After scrolling up again, the issue is fixed until you reload the page again.
 
 - When reloading home page, sometimes you appear at the trending shows or latest stories sections (not a javascript issue)
+
+- Sometimes unable to delete article in the bookmarks page if there is only 1 article left
 
 ---
 
@@ -141,3 +148,5 @@ https://fonts.google.com/
 
 fontawesome
 https://fontawesome.com/
+
+Github Copilot

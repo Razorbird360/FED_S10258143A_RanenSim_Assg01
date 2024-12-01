@@ -553,6 +553,10 @@ body {
     width: 70%;
 }
 
+.content_container a{
+    text-decoration: none;
+}
+
 .activities_button {
     position: relative;
     width: fit-content;
@@ -1077,7 +1081,7 @@ footer {
     .content_container {
         margin-top: 2vh;
         display: flex;
-        width: 90w;
+        width: 90vw;
         max-width: 90vw;
         height: 10vh;
         flex-direction: row;
